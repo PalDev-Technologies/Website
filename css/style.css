@@ -117,7 +117,7 @@ h6,
         background: var(--primary);
     }
 
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -306,19 +306,19 @@ h6,
         max-width: 100% !important;
     }
 
-    .newsletter .newsletter-text  {
+    .newsletter .newsletter-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .newsletter .newsletter-text  {
+    .newsletter .newsletter-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .newsletter .newsletter-text  {
+    .newsletter .newsletter-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -328,11 +328,11 @@ h6,
 .case-item img {
     transition: .5s;
 }
-  
+
 .case-item:hover img {
     transform: scale(1.2);
 }
-  
+
 .case-overlay {
     position: absolute;
     padding: 30px;
@@ -477,7 +477,7 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     border: 1px solid rgba(256, 256, 256, .1);
     border-radius: 40px;
     transition: .3s;
@@ -492,7 +492,7 @@ h6,
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     font-weight: normal;
     transition: .3s;
 }
@@ -521,7 +521,7 @@ h6,
 }
 
 .footer .copyright a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
 
 .footer .copyright a:hover {
@@ -538,4 +538,62 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Logo adjustments */
+.navbar-brand img {
+    height: 70px;
+    /* Adjust this size based on how large you want the logo */
+    width: auto;
+    padding: 5px 10px;
+    /* Ensure spacing around the logo */
+}
+
+/* Adjust navbar elements */
+.navbar {
+    padding: 0 !important;
+    /* Remove default padding */
+    align-items: center;
+    /* Align elements vertically */
+}
+
+.navbar-nav {
+    margin-left: auto;
+    /* Ensure the menu is aligned to the right */
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 0 15px;
+    /* Adjust padding for a better look */
+    font-size: 16px;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 50px;
+        /* Make the logo smaller for mobile */
+        width: auto;
+    }
+
+    .navbar .navbar-nav {
+        text-align: center;
+        /* Center the menu items */
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 10px 0;
+        /* Adjust padding for mobile view */
+    }
+
+    /* Ensure the navbar-collapse takes up the full width */
+    .navbar-collapse {
+        width: 100%;
+    }
 }

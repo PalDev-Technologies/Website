@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.2"
+   viewBox="0 0 200 40"
+   width="200"
+   height="40"
+   id="svg7"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <title
+     id="title1">New Project</title>
+  <defs
+     id="defs1">
+    <image
+       width="32"
+       height="32"
+       id="img1"
+       href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMWVtcHgiIGhlaWdodD0iMWVtcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRlcm1pbmFsIiBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtb3JpZ2luYWxmaWxsY29sb3I9IiM5YjFmZTgiIHRyYW5zZm9ybT0icm90YXRlKDApIHNjYWxlKDEsIDEpIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNCAySDJhMSAxIDAgMCAwLTEgMXYxMGExIDEgMCAwIDAgMSAxaDEyYTEgMSAwIDAgMCAxLTFWM2ExIDEgMCAwIDAtMS0xek0yIDFhMiAyIDAgMCAwLTIgMnYxMGEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWM2EyIDIgMCAwIDAtMi0ySDJ6Ii8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNiA5YS41LjUgMCAwIDEgLjUtLjVoM2EuNS41IDAgMCAxIDAgMWgtM0EuNS41IDAgMCAxIDYgOXpNMy4xNDYgNC4xNDZhLjUuNSAwIDAgMSAuNzA4IDBsMiAyYS41LjUgMCAwIDEgMCAuNzA4bC0yIDJhLjUuNSAwIDEgMS0uNzA4LS43MDhMNC43OTMgNi41IDMuMTQ2IDQuODU0YS41LjUgMCAwIDEgMC0uNzA4eiIvPgo8L3N2Zz4=" />
+  </defs>
+  <style
+     id="style1">
+		tspan { white-space:pre } 
+		.t0 { font-size: 24px;fill: #ffffff;font-weight: 400;font-family: &quot;Audiowide-Regular&quot;, &quot;Audiowide&quot; } 
+		.t1 { font-size: 24px;fill: #14183e;font-weight: 400;font-family: &quot;Audiowide-Regular&quot;, &quot;Audiowide&quot; } 
+	</style>
+  <text
+     id="PalDev"
+     x="78.418449"
+     y="26.359144"><tspan
+       x="78.418449"
+       y="26.359144"
+       class="t0"
+       id="tspan1">P</tspan><tspan
+       y="26.359144"
+       class="t0"
+       id="tspan2">a</tspan><tspan
+       y="26.359144"
+       class="t0"
+       id="tspan3">l</tspan><tspan
+       y="26.359144"
+       class="t1"
+       id="tspan4">D</tspan><tspan
+       y="26.359144"
+       class="t1"
+       id="tspan5">e</tspan><tspan
+       y="26.359144"
+       class="t1"
+       id="tspan6">v</tspan><tspan
+       y="26.359144"
+       class="t1"
+       id="tspan7" /></text>
+  <use
+     id="terminal(2)"
+     href="#img1"
+     transform="matrix(0.766,0,0,0.766,51.953871,6.2196595)" />
+</svg>
