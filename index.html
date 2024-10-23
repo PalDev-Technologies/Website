@@ -783,8 +783,8 @@
             // Collect form data
             const formData = new FormData(this);
 
-            // Send form data to PHP handler using Fetch API
-            fetch('contact_form_handler.php', {
+            // Send form data to PHP handler using Fetch API (update the URL)
+            fetch('https://80e0-85-255-234-109.ngrok-free.app/contact_form_handler.php', {
                 method: 'POST',
                 body: formData
             })
@@ -820,6 +820,7 @@
                 });
         });
     </script>
+
 </body>
 
 </html>
