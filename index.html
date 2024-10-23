@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/faviconlogo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
+
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
+
+
 
 <body>
     <!-- Spinner Start -->
@@ -69,7 +79,6 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="faq.html" class="dropdown-item">FAQs</a>
                             </div>
@@ -174,7 +183,7 @@
                             href="https://www.instagram.com/paldevtechnologies/" target="_blank"><i
                                 class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-primary btn-square"
-                            href="https://www.linkedin.com/in/your_linkedin_username" target="_blank"><i
+                            href="https://www.linkedin.com/in/paldevtechnologies/" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -502,6 +511,7 @@
         </div>
     </div>
     <!-- FAQs End -->
+
     <!-- Team Start -->
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
@@ -643,14 +653,14 @@
                     <img class="img-fluid" src="img/newsletter.png" alt="Contact Us">
                 </div>
                 <div class="col-md-7 py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Get
-                        in Touch</div>
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Get in Touch</div>
                     <h1 class="text-white mb-4">We'd Love to Hear From You!</h1>
-                    <p class="text-white-50 mb-4">Feel free to reach out to us with any
-                        questions or inquiries. We're here to help!</p>
+                    <p class="text-white-50 mb-4">Feel free to reach out to us with any questions or inquiries. We're
+                        here
+                        to help!</p>
 
                     <!-- Form Start -->
-                    <form action="contact_form_handler.php" method="POST">
+                    <form id="contactForm" method="POST">
                         <div class="position-relative w-100 mt-3 mb-2">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
                                 placeholder="Enter Your Name" name="name" required style="height: 48px;">
@@ -659,11 +669,10 @@
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
                                 placeholder="Enter Your Email" name="email" required style="height: 48px;">
                         </div>
-                        <!-- Message Textarea -->
                         <div class="position-relative w-100 mt-3 mb-2">
                             <textarea class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                                placeholder="Enter Your Message" name="message" required rows="4"
-                                style="height: 50px;"></textarea>
+                                placeholder="Enter Your Message" name="message" required
+                                style="height: 100px;"></textarea>
                         </div>
                         <button type="submit" class="btn btn-light rounded-pill text-primary px-4 py-2 mt-3">Send
                             Message</button>
@@ -675,6 +684,7 @@
         </div>
     </div>
     <!-- Get In Touch End -->
+
 
 
 
@@ -698,20 +708,20 @@
                     <p><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com
                     </p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/in/paldevtechnologies/"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <h5 class="text-white mb-4">Popular Links</h5>
-                    <a class="btn btn-link" href="#">About Us</a>
-                    <a class="btn btn-link" href="#">Contact Us</a>
-                    <a class="btn btn-link" href="#">Privacy Policy</a>
-                    <a class="btn btn-link" href="#">Terms & Conditions</a>
-                    <a class="btn btn-link" href="#">Careers</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <!-- <a class="btn btn-link" href="#">Privacy Policy</a> -->
+                    <!-- <a class="btn btn-link" href="#">Terms & Conditions</a> -->
+                    <!-- <a class="btn btn-link" href="#">Careers</a> -->
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
@@ -731,9 +741,9 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="#">Home</a>
-                            <a href="#">Cookies</a>
-                            <a href="#">Help</a>
+                            <a href="/">Home</a>
+                            <!-- <a href="#">Cookies</a> -->
+                            <a href="contact.html">Help</a>
                             <a href="#">FAQs</a>
                         </div>
                     </div>
@@ -760,6 +770,54 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- Include SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const formData = new FormData(this);
+
+            // Send form data to PHP handler using Fetch API
+            fetch('contact_form_handler.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Check for success or error status
+                    if (data.status === 'success') {
+                        // Show SweetAlert2 success message
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Message Sent Successfully!',
+                            text: 'We will get back to you shortly.',
+                            confirmButtonText: 'Okay'
+                        });
+                    } else {
+                        // Show SweetAlert2 error message
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: data.message,
+                            confirmButtonText: 'Try Again'
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Show SweetAlert2 error message in case of a network error
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong! Please try again later.',
+                        confirmButtonText: 'Okay'
+                    });
+                });
+        });
+    </script>
 </body>
 
 </html>

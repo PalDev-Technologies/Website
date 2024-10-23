@@ -5,15 +5,18 @@
     <meta charset="utf-8">
     <title>PalDev Technologies - Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="PalDev services for web and mobile app development, custom software solutions, and systems integration" name="description">
+    <meta
+        content="PalDev services for web and mobile app development, custom software solutions, and systems integration"
+        name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/faviconlogo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -32,7 +35,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -44,7 +48,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
-                    <img src="Main-Logo.svg" alt="Logo" class="logo" style="max-height: 300px;">
+                    <img src="img/logoo.svg" alt="Logo" class="logo" style="max-height: 300px;">
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -58,14 +62,14 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="faq.html" class="dropdown-item">FAQs</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
@@ -96,64 +100,90 @@
     </div>
     <!-- Hero End -->
 
-    <!-- Service Section Start -->
-    <div class="container-fluid bg-light py-5">
+    <!-- Service Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
-                    <h1 class="mb-4">Comprehensive Tech Solutions for Your Business</h1>
-                    <p>We offer a full range of digital services to turn your vision into reality. From website and app development to custom system solutions, we create scalable and user-friendly products for businesses of all sizes.</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="#">Read More</a>
+                    <h1 class="mb-4">Our Comprehensive Tech Solutions for Your Business</h1>
+                    <p class="mb-4">We offer a full range of digital services to turn your vision into reality. From
+                        website and app development to custom
+                        system solutions, we are dedicated to creating innovative, scalable, and user-friendly products
+                        that meet your business
+                        needs. No matter the industry or challenge, we have the tools and expertise to bring your
+                        project to life.</p>
+                    <a class="btn btn-primary rounded-pill px-4" href="service.html">Read More</a>
+                    <!-- Link to Services Page -->
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <div class="service-item text-center rounded p-4">
-                                <div class="service-icon mb-3">
-                                    <i class="fa fa-network-wired fa-2x"></i>
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                    <div
+                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                        <div class="service-icon btn-square">
+                                            <i class="fa fa-network-wired fa-2x"></i> <!-- Systems Integration Icon -->
+                                        </div>
+                                        <h5 class="mb-3">Systems Integration</h5>
+                                        <p>Seamlessly connect various platforms, ensuring your technology works together
+                                            for maximum
+                                            efficiency.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                                    </div>
                                 </div>
-                                <h5>Systems Integration</h5>
-                                <p>Connect various platforms and systems to ensure your technology works seamlessly together for maximum efficiency.</p>
-                                <a class="btn btn-outline-primary rounded-pill px-4" href="#">Learn More</a>
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                    <div
+                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                        <div class="service-icon btn-square">
+                                            <i class="fa fa-cogs fa-2x"></i> <!-- Custom Software Solutions Icon -->
+                                        </div>
+                                        <h5 class="mb-3">Custom Software Solutions</h5>
+                                        <p>Tailor-made software to automate and streamline your business processes
+                                            efficiently.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="service-item text-center rounded p-4">
-                                <div class="service-icon mb-3">
-                                    <i class="fa fa-cogs fa-2x"></i>
+                        <div class="col-md-6 pt-md-4">
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                    <div
+                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                        <div class="service-icon btn-square">
+                                            <i class="fa fa-mobile-alt fa-2x"></i> <!-- App Development Icon -->
+                                        </div>
+                                        <h5 class="mb-3">App Development</h5>
+                                        <p>Build powerful, intuitive mobile applications designed for both iOS and
+                                            Android platforms.
+                                        </p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                                    </div>
                                 </div>
-                                <h5>Custom Software Solutions</h5>
-                                <p>Develop tailor-made software to automate and streamline your business processes efficiently.</p>
-                                <a class="btn btn-outline-primary rounded-pill px-4" href="#">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item text-center rounded p-4">
-                                <div class="service-icon mb-3">
-                                    <i class="fa fa-mobile-alt fa-2x"></i>
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
+                                    <div
+                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                        <div class="service-icon btn-square">
+                                            <i class="fa fa-laptop-code fa-2x"></i> <!-- Web Development Icon -->
+                                        </div>
+                                        <h5 class="mb-3">Web Development</h5>
+                                        <p>Create modern, responsive websites that engage your audience and enhance your
+                                            brand presence
+                                            online.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                                    </div>
                                 </div>
-                                <h5>App Development</h5>
-                                <p>Build powerful, intuitive mobile applications for both iOS and Android platforms to engage your customers effectively.</p>
-                                <a class="btn btn-outline-primary rounded-pill px-4" href="#">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item text-center rounded p-4">
-                                <div class="service-icon mb-3">
-                                    <i class="fa fa-laptop-code fa-2x"></i>
-                                </div>
-                                <h5>Web Development</h5>
-                                <p>Create modern, responsive websites that enhance your online presence and engage your audience.</p>
-                                <a class="btn btn-outline-primary rounded-pill px-4" href="#">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-    <!-- Service Section End -->
+    <!-- Service End -->
 
     <!-- FAQs Start -->
     <div class="container-fluid py-5">
@@ -168,26 +198,30 @@
                         <!-- FAQ Item 1 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
                                     What services do you offer?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                    We offer a range of services including website and app development, custom software solutions, and systems integration.
+                                    We offer a range of services including website and app development, custom software
+                                    solutions, and systems integration.
                                 </div>
                             </div>
                         </div>
                         <!-- FAQ Item 2 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
                                     How long does it take to develop a project?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                    The timeline depends on the complexity of the project. Simple projects may take a few weeks, while larger custom systems can take several months.
+                                    The timeline depends on the complexity of the project. Simple projects may take a
+                                    few weeks, while larger custom systems can take several months.
                                 </div>
                             </div>
                         </div>
@@ -198,7 +232,8 @@
                         <!-- FAQ Item 3 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree">
                                     Do you offer ongoing support?
                                 </button>
                             </h2>
@@ -211,13 +246,15 @@
                         <!-- FAQ Item 4 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour">
                                     Will my project be mobile-friendly?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ2">
                                 <div class="accordion-body">
-                                    Yes, all of our websites and applications are designed to be mobile-friendly and responsive.
+                                    Yes, all of our websites and applications are designed to be mobile-friendly and
+                                    responsive.
                                 </div>
                             </div>
                         </div>
@@ -232,26 +269,38 @@
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-md-6 col-lg-3">
-                    <h1 class="text-white">Pal<span class="text-primary">DEV</span></h1>
-                    <p>We are two Computer Science graduates passionate about turning your ideas into digital solutions. Whether it's web, app, or custom software development, we're here to help.</p>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">Pal<span class="text-primary">DEV</h1>
+                    </a>
+                    <p class="mb-0">We are two Computer Science graduates passionate
+                        about using technology to turn your
+                        ideas into digital solutions. Whether it's web, app, or custom
+                        software development, we’re here
+                        to
+                        help bring your vision to life.</p>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com
+                    </p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/in/paldevtechnologies/"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <h5 class="text-white mb-4">Popular Links</h5>
-                    <a class="btn btn-link" href="#">About Us</a>
-                    <a class="btn btn-link" href="#">Contact Us</a>
-                    <a class="btn btn-link" href="#">Privacy Policy</a>
-                    <a class="btn btn-link" href="#">Terms & Conditions</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <!-- <a class="btn btn-link" href="#">Privacy Policy</a> -->
+                    <!-- <a class="btn btn-link" href="#">Terms & Conditions</a> -->
+                    <!-- <a class="btn btn-link" href="#">Careers</a> -->
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
                     <a class="btn btn-link" href="#">App Development</a>
                     <a class="btn btn-link" href="#">Web Development</a>
@@ -260,8 +309,27 @@
                 </div>
             </div>
         </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">PalDEV</a>, All Rights
+                        Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="/">Home</a>
+                            <!-- <a href="#">Cookies</a> -->
+                            <a href="contact.html">Help</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Footer End -->
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
