@@ -776,7 +776,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // Handle form submission
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent the default form submission
 
@@ -790,6 +789,8 @@
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log('Response Data:', data); // Check the actual response
+
                     // Check for success or error status
                     if (data.status === 'success') {
                         // Show SweetAlert2 success message
@@ -800,21 +801,23 @@
                             confirmButtonText: 'Okay'
                         });
                     } else {
-                        // Show SweetAlert2 error message
+                        // Show SweetAlert2 error message with the actual error from backend
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: data.message,
+                            text: data.message || 'An error occurred.',
                             confirmButtonText: 'Try Again'
                         });
                     }
                 })
                 .catch(error => {
-                    // Show SweetAlert2 error message in case of a network error
+                    console.error('Error:', error); // Log the error for debugging
+
+                    // Show SweetAlert2 error message with the actual error from the catch block
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'Something went wrong! Please try again later.',
+                        text: 'Something went wrong! Error details: ' + error.message,
                         confirmButtonText: 'Okay'
                     });
                 });
