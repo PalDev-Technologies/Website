@@ -68,169 +68,138 @@
     </div>
     <!-- Spinner End -->
 
+<!-- Navbar Start -->
+<div class="container-fluid sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
+            </a>
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="index.html" class="navbar-brand">
-                    <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                    </div>
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+                    <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
+                    <a href="service.html" class="nav-item nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                    <a href="project.html" class="nav-item nav-link" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+                    <a href="contact.html" class="nav-item nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
                 </div>
-            </nav>
-        </div>
+                <!-- Language Toggle Button -->
+                <button type="button" class="btn btn-outline-light ms-3" id="language-toggle" onclick="toggleLanguage()">Arabic</button>
+            </div>
+        </nav>
     </div>
-    <!-- Navbar End -->
+</div>
+<!-- Navbar End -->
 
-
-    <!-- Hero Start -->
-    <div class="container-fluid pt-5 bg-primary hero-header">
-        <div class="container pt-5">
-            <div class="row g-5 pt-5">
-                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Contact Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contact Us</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/contact-hero.png" alt="" style="max-height: 300px;">
-                </div>
+<!-- Hero Start -->
+<div class="container-fluid pt-5 bg-primary hero-header">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <h1 class="display-4 text-white mb-4 animated slideInRight" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid" src="img/contact-hero.png" alt="" style="max-height: 300px;">
             </div>
         </div>
     </div>
-    <!-- Hero End -->
+</div>
+<!-- Hero End -->
 
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Contact Us</div>
-                <h1 class="mb-4">Got a Project in Mind? Let's Connect!</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+<!-- Contact Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</div>
+            <h1 class="mb-4" data-en="Got a Project in Mind? Let's Connect!" data-ar="هل لديك مشروع في ذهنك؟ لنتواصل!">Got a Project in Mind? Let's Connect!</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="wow fadeIn" data-wow-delay="0.3s">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name" data-en="Your Name" data-ar="اسمك">Your Name</label>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">Pal<span class="text-primary">DEV</h1>
-                    </a>
-                    <p class="mb-0">We are two Computer Science graduates passionate
-                        about using technology to turn your
-                        ideas into digital solutions. Whether it's web, app, or custom
-                        software development, we’re here
-                        to
-                        help bring your vision to life.</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com
-                    </p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social"
-                            href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social"
-                            href="https://www.linkedin.com/in/paldevtechnologies/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <!-- <a class="btn btn-link" href="#">Privacy Policy</a> -->
-                    <!-- <a class="btn btn-link" href="#">Terms & Conditions</a> -->
-                    <!-- <a class="btn btn-link" href="#">Careers</a> -->
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="text-white mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="#">App Development</a>
-                    <a class="btn btn-link" href="#">Web Development</a>
-                    <a class="btn btn-link" href="#">Custom Software Solutions</a>
-                    <a class="btn btn-link" href="#">Systems Integration</a>
-                </div>
-            </div>
-        </div>
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">PalDEV</a>, All Rights
-                        Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="/">Home</a>
-                            <!-- <a href="#">Cookies</a> -->
-                            <a href="contact.html">Help</a>
-                            <a href="#">FAQs</a>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email" data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <label for="message" data-en="Message" data-ar="رسالة">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Contact End -->
+
+<script>
+    // Function to toggle between English and Arabic
+    function toggleLanguage() {
+        const currentLang = document.documentElement.getAttribute('lang');
+        const newLang = currentLang === 'en' ? 'ar' : 'en';
+        setLanguage(newLang);
+
+        // Save the user's language preference in local storage
+        localStorage.setItem('preferredLanguage', newLang);
+    }
+
+    // Function to set the language for the entire page
+    function setLanguage(lang) {
+        // Update HTML lang attribute and direction
+        document.documentElement.setAttribute('lang', lang);
+        document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+        // Update all text content based on data attributes
+        document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+            element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+        });
+
+        // Update the button text
+        const langToggle = document.getElementById('language-toggle');
+        if (langToggle) {
+            langToggle.textContent = lang === 'ar' ? 'English' : 'Arabic';
+        }
+    }
+
+    // Load the user's language preference on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        setLanguage(preferredLanguage);
+    });
+</script>
+
 
 
     <!-- Back to Top -->
@@ -248,6 +217,51 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the language toggle button
+            const languageToggleButton = document.getElementById('language-toggle');
+    
+            // Function to set language
+            function setLanguage(lang) {
+                // Set language in localStorage
+                localStorage.setItem('selectedLanguage', lang);
+    
+                // Update the button text to indicate the current language
+                languageToggleButton.innerText = lang === 'en' ? 'Arabic' : 'English';
+    
+                // Set the page direction to RTL for Arabic and LTR for English
+                document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    
+                // Select all elements with data-en and data-ar attributes
+                const elements = document.querySelectorAll('[data-en][data-ar]');
+    
+                // Loop through each element and update its text content
+                elements.forEach(element => {
+                    element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                });
+            }
+    
+            // Function to toggle language
+            function toggleLanguage() {
+                // Get the current language from localStorage
+                let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+                // Toggle the language variable between 'en' and 'ar'
+                currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+                // Set the new language
+                setLanguage(currentLanguage);
+            }
+    
+            // Add an event listener to the button to call the toggleLanguage function when clicked
+            languageToggleButton.addEventListener('click', toggleLanguage);
+    
+            // On page load, set the language to the one saved in localStorage, default to 'en'
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            setLanguage(savedLanguage);
+        });
+    </script>
+    
 </body>
 
 </html>

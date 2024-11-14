@@ -67,8 +67,6 @@
 </head>
 
 
-
-
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
@@ -80,36 +78,27 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
+     <!-- Navbar Start -->
+     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
                     <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
                 </a>
 
-
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light mt-2">
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="faq.html" class="dropdown-item">FAQs</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+                        <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
+                        <a href="service.html" class="nav-item nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                        <a href="project.html" class="nav-item nav-link" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+                        <a href="contact.html" class="nav-item nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
                     </div>
-                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
-                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                    <!-- Language Toggle Button -->
+                    <button type="button" class="btn btn-outline-light ms-3" id="language-toggle" onclick="toggleLanguage()">Arabic</button>
                 </div>
             </nav>
         </div>
@@ -117,31 +106,36 @@
     <!-- Navbar End -->
 
 
-    <!-- Hero Start -->
-    <div class="container-fluid pt-5 bg-primary hero-header mb-5">
-        <div class="container pt-5">
-            <div class="row g-5 pt-5">
-                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
 
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">PalDev</div>
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Code Your Vision Into Reality</h1>
-                    <p class="text-white mb-4 animated slideInRight">We’re a team of passionate Computer Science
-                        graduates ready to turn your ideas into digital solutions. From apps to
-                        websites, we bring fresh perspectives and innovation to every project. Let’s make your vision a
-                        reality!</p>
-                    <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read
-                        More</a>
-                    <a href="contact.html"
-                        class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
-                    </a>
+<!-- Hero Start -->
+<div class="container-fluid pt-5 hero-header mb-5" id="hero-section" style="background: linear-gradient(90deg, var(--primary), var(--secondary));">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <div id="hero-paldev" class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated fadeInDown" data-en="PalDev" data-ar="PalDev"> PalDev</div>
+                <h1 id="hero-title" class="display-4 text-white mb-4 animated fadeInLeft" style="animation-delay: 0.2s;" data-en="Code Your Vision Into Reality" data-ar="برمج رؤيتك إلى واقع">برمج رؤيتك إلى واقع</h1>
+                <p id="hero-text" class="text-white mb-4 animated fadeInLeft" style="animation-delay: 0.4s; line-height: 1.8;" 
+   data-en="We’re a team of passionate Computer Science graduates ready to turn your ideas into digital solutions. From apps to websites, we bring fresh perspectives and innovation to every project. Let’s make your vision a reality!" 
+   data-ar="نحن فريق من خريجي علوم الحاسوب الملتزمين بتحقيق رؤيتك، ونسعى لتحويل أفكارك إلى حلول رقمية مبتكرة. سواء كانت تطبيقات أو مواقع إلكترونية، نضمن تقديم إبداع ورؤية متميزة لكل مشروع. دعنا نجعل رؤيتك واقعًا!
+   "
+   dir="auto">
+   <!-- Default to English initially -->
+   We’re a team of passionate Computer Science graduates ready to turn your ideas into digital solutions. From apps to websites, we bring fresh perspectives and innovation to every project. Let’s make your vision a reality!
+</p>
+
+             
+                <div class="button-wrapper d-flex gap-3 animated fadeInUp" style="animation-delay: 0.6s;">
+                    <a id="hero-read-more" href="#" class="btn btn-light py-sm-3 px-sm-5 rounded-pill" data-en="Read More" data-ar="اقرأ المزيد">اقرأ المزيد</a>
+                    <a id="hero-contact-us" href="contact.html" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
                 </div>
-                <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/hero-img.png" alt="">
-                </div>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid animated fadeInRight" style="animation-delay: 1s;" src="img/hero-img.png" alt="">
             </div>
         </div>
     </div>
-    <!-- Hero End -->
+</div>
+<!-- Hero End -->
 
 
     <!-- Full Screen Search Start -->
@@ -165,175 +159,157 @@
     <!-- Full Screen Search End -->
 
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        <img class="img-fluid" src="img/about-img.jpg">
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img">
+                    <img class="img-fluid" src="img/about-img.jpg" alt="About Us Image">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="About Us" data-ar="من نحن">About Us</div>
+                <h1 class="mb-4" data-en="We Make Your Vision Come To Life" data-ar=" نجعل رؤيتك واقعًا">We Make Your Vision Come To Life</h1>
+                <p class="mb-4" data-en="As passionate advocates for technological innovation, we are dedicated to using our extensive programming skills to transform abstract ideas into tangible realities. Our commitment as Palestinian tech enthusiasts is to develop cutting-edge solutions that effectively address complex challenges in the digital world." data-ar="نحن ملتزمون بدعم الابتكار التكنولوجي، ونسعى لاستخدام مهاراتنا البرمجية المتقدمة لتحويل الأفكار المجردة إلى حقائق ملموسة. كمتخصصين فلسطينيين في مجال التكنولوجيا، نلتزم بتطوير حلول مبتكرة لمواجهة التحديات الرقمية المعقدة " >As passionate advocates for technological innovation, we are dedicated to using our extensive programming skills to transform abstract ideas into tangible realities. Our commitment as Palestinian tech enthusiasts is to develop cutting-edge solutions that effectively address complex challenges in the digital world.</p>
+                <p class="mb-4" data-en="Whether you have a vision for a project, an app, or any tech-driven concept, we are here to bring it to life with creativity, precision, and cutting-edge tools. Our mission is to collaborate and turn your ideas into impactful, functional, and scalable digital solutions that make a difference. Let’s partner together and create the future!" data-ar="سواء كانت رؤيتك لمشروع، تطبيق، أو فكرة تقنية، نحن هنا لجعلها حقيقة باستخدام الإبداع والدقة وأحدث الأدوات. مهمتنا هي تحويل أفكارك إلى حلول رقمية ذات تأثير وفعالية وقابلة للتطوير. دعونا نتعاون لنبتكر المستقبل معًا" >Whether you have a vision for a project, an app, or any tech-driven concept, we are here to bring it to life with creativity, precision, and cutting-edge tools. Our mission is to collaborate and turn your ideas into impactful, functional, and scalable digital solutions that make a difference. Let’s partner together and create the future!</p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <h6 class="mb-3" data-en="Fresh Perspective" data-ar="رؤية جديدة "><i class="fa fa-check text-primary me-2"></i>Fresh Perspective</h6>
+                        <h6 class="mb-0" data-en="Dedicated Team" data-ar="فريق ملتزم"><i class="fa fa-check text-primary me-2"></i>Dedicated Team</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="mb-3" data-en="Flexible & Available" data-ar="مرن ومتواجد دائمًا"><i class="fa fa-check text-primary me-2"></i>Flexible & Available</h6>
+                        <h6 class="mb-0" data-en="Affordable Solutions" data-ar="حلول بتكلفة مناسبة "><i class="fa fa-check text-primary me-2"></i>Affordable Solutions</h6>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Us</div>
-                    <h1 class="mb-4">We Make Your Vision Come To Life</h1>
-                    <p class="mb-4">As passionate advocates for technological innovation, we are dedicated to using our extensive programming skills to transform abstract ideas into tangible realities. Our commitment as Palestinian tech enthusiasts is to develop cutting-edge solutions that effectively address complex challenges in the digital world.</p>
-                    <p class="mb-4">Whether you have a vision for a project, an app, or any tech-driven concept, we are
-                        here to bring it to life with
-                        creativity, precision, and cutting-edge tools. Our mission is to collaborate and turn your ideas
-                        into impactful,
-                        functional, and scalable digital solutions that make a difference. Let’s partner together and
-                        create the future!</p>
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Fresh Perspective</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Dedicated Team</h6>
-                        </div>
-                        <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Flexible & Available</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Affordable Solutions</h6>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mt-4">
-                        <a class="btn btn-primary rounded-pill px-4 me-4" href="about.html">Read More</a>
-                        <!-- Added margin-end -->
-                        <a class="btn btn-outline-primary btn-square me-3"
-                            href="https://www.instagram.com/paldevtechnologies/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square"
-                            href="https://www.linkedin.com/in/paldevtechnologies/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
+                <div class="d-flex align-items-center mt-4">
+                    <!-- Read More Button -->
+                    <a class="btn btn-primary rounded-pill px-4 me-4" href="about.html" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
+                    
+                    <!-- Social Media Links -->
+                    <div class="d-flex ms-4">
+                        <a class="btn btn-outline-primary btn-square me-4" href="https://www.instagram.com/paldevtechnologies/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://www.linkedin.com/in/paldevtechnologies/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+<!-- About End -->
+
+
 
 
     <!-- Service Start -->
-    <div class="container-fluid bg-light mt-5 py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
-                    <h1 class="mb-4">Our Comprehensive Tech Solutions for Your Business</h1>
-                    <p class="mb-4">We offer a full range of digital services to turn your vision into reality. From
-                        website and app development to custom
-                        system solutions, we are dedicated to creating innovative, scalable, and user-friendly products
-                        that meet your business
-                        needs. No matter the industry or challenge, we have the tools and expertise to bring your
-                        project to life.</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="service.html">Read More</a>
-                    <!-- Link to Services Page -->
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div
-                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <i class="fa fa-network-wired fa-2x"></i> <!-- Systems Integration Icon -->
-                                        </div>
-                                        <h5 class="mb-3">Systems Integration</h5>
-                                        <p>Seamlessly connect various platforms, ensuring your technology works together
-                                            for maximum
-                                            efficiency.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+<div class="container-fluid bg-light mt-5 py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Our Services" data-ar="خدماتنا">Our Services</div>
+                <h1 class="mb-4" data-en="Our Comprehensive Tech Solutions for Your Business" data-ar="حلولنا التقنية الشاملة لأعمالك">Our Comprehensive Tech Solutions for Your Business</h1>
+                <p class="mb-4" data-en="We offer a full range of digital services to turn your vision into reality. From website and app development to custom system solutions, we are dedicated to creating innovative, scalable, and user-friendly products that meet your business needs. No matter the industry or challenge, we have the tools and expertise to bring your project to life." data-ar="نقدم مجموعة متكاملة من الخدمات الرقمية لتحويل رؤيتك إلى واقع. من تطوير المواقع والتطبيقات إلى حلول الأنظمة المخصصة، نحن ملتزمون بإنشاء منتجات مبتكرة، قابلة للتطوير، وسهلة الاستخدام تلبي احتياجات عملك. بغض النظر عن الصناعة أو التحديات، لدينا الأدوات والخبرة اللازمة لجعل مشروعك حقيقة ملموسة" >We offer a full range of digital services to turn your vision into reality. From website and app development to custom system solutions, we are dedicated to creating innovative, scalable, and user-friendly products that meet your business needs. No matter the industry or challenge, we have the tools and expertise to bring your project to life.</p>
+                <a class="btn btn-primary rounded-pill px-4" href="service.html" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
+                <!-- Link to Services Page -->
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-network-wired fa-2x"></i> <!-- Systems Integration Icon -->
                                     </div>
+                                    <h5 class="mb-3" data-en="Systems Integration" data-ar="ترابط الأنظمة" >Systems Integration</h5>
+                                    <p data-en="Seamlessly connect various platforms, ensuring your technology works together for maximum efficiency." data-ar="ربط مختلف المنصات بسلاسة لضمان تكامل التكنولوجيا لتحقيق أعلى كفاءة">Seamlessly connect various platforms, ensuring your technology works together for maximum efficiency.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
                                 </div>
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
-                                    <div
-                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <i class="fa fa-cogs fa-2x"></i> <!-- Custom Software Solutions Icon -->
-                                        </div>
-                                        <h5 class="mb-3">Custom Software Solutions</h5>
-                                        <p>Tailor-made software to automate and streamline your business processes
-                                            efficiently.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-cogs fa-2x"></i> <!-- Custom Software Solutions Icon -->
                                     </div>
+                                    <h5 class="mb-3" data-en="Custom Software Solutions" data-ar="حلول البرمجيات المخصصة">Custom Software Solutions</h5>
+                                    <p data-en="Tailor-made software to automate and streamline your business processes efficiently." data-ar="برمجيات مصممة خصيصًا لأتمتة وتسهيل عمليات عملك بفعالية ">Tailor-made software to automate and streamline your business processes efficiently.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 pt-md-4">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                                    <div
-                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <i class="fa fa-mobile-alt fa-2x"></i> <!-- App Development Icon -->
-                                        </div>
-                                        <h5 class="mb-3">App Development</h5>
-                                        <p>Build powerful, intuitive mobile applications designed for both iOS and
-                                            Android platforms.
-                                        </p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                    </div>
+                    <div class="col-md-6 pt-md-4">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-mobile-alt fa-2x"></i> <!-- App Development Icon -->
                                     </div>
+                                    <h5 class="mb-3" data-en="App Development" data-ar="تطوير التطبيقات">App Development</h5>
+                                    <p data-en="Build powerful, intuitive mobile applications designed for both iOS and Android platforms." data-ar="قم ببناء تطبيقات محمولة قوية وبديهية مصممة لمنصتي iOS وAndroid.">Build powerful, intuitive mobile applications designed for both iOS and Android platforms.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
                                 </div>
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
-                                    <div
-                                        class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <i class="fa fa-laptop-code fa-2x"></i> <!-- Web Development Icon -->
-                                        </div>
-                                        <h5 class="mb-3">Web Development</h5>
-                                        <p>Create modern, responsive websites that engage your audience and enhance your
-                                            brand presence
-                                            online.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-laptop-code fa-2x"></i> <!-- Web Development Icon -->
                                     </div>
+                                    <h5 class="mb-3" data-en="Web Development" data-ar="تطوير المواقع">Web Development</h5>
+                                    <p data-en="Create modern, responsive websites that engage your audience and enhance your brand presence online." data-ar="إنشاء مواقع إلكترونية حديثة ومتجاوبة تجذب جمهورك وتعزز حضور علامتك التجارية عبر الإنترنت">Create modern, responsive websites that engage your audience and enhance your brand presence online.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
 
 
-    <!-- Feature Start -->
-    <div class="container-fluid bg-primary feature pt-5">
-        <div class="container pt-5">
-            <div class="row g-5">
-                <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div>
-                    <h1 class="text-white mb-4">Young Talent, Fresh Perspectives</h1>
-                    <p class="text-light mb-4">Driven by our passion to transform innovative ideas into technological realities. Our experience encompasses a diverse range of projects across various industries, enabling us to offer uniquely tailored, tech-driven solutions that meet the specific needs of our clients.</p>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Passionate about tech-driven solutions</span>
+ <!-- Feature Start -->
+<div class="container-fluid bg-primary feature pt-5">
+    <div class="container pt-5">
+        <div class="row g-5">
+            <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</div>
+                <h1 class="text-white mb-4" data-en="Young Talent, Fresh Perspectives" data-ar="مواهب شابة، رؤى جديدة">Young Talent, Fresh Perspectives</h1>
+                <p class="text-light mb-4" data-en="Driven by our passion to transform innovative ideas into technological realities. Our experience encompasses a diverse range of projects across various industries, enabling us to offer uniquely tailored, tech-driven solutions that meet the specific needs of our clients." data-ar="مدفوعون بشغفنا لتحويل الأفكار المبتكرة إلى واقع تقني. تشمل خبراتنا مجموعة واسعة من المشاريع في مختلف الصناعات، مما يمكننا من تقديم حلول تقنية مخصصة لتلبية الاحتياجات المحددة لعملائنا.">Driven by our passion to transform innovative ideas into technological realities. Our experience encompasses a diverse range of projects across various industries, enabling us to offer uniquely tailored, tech-driven solutions that meet the specific needs of our clients.</p>
+                
+                <!-- Updated Checkmark List with Proper Spacing for Both Directions -->
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3" style="margin-inline-end: 0.75rem;">
+                        <i class="fa fa-check"></i>
                     </div>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Fresh perspectives, adaptable skills</span>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Flexible, collaborative, and ready to grow</span>
-                    </div>
+                    <span data-en="Passionate about tech-driven solutions" data-ar=" ملتزمون بتقديم حلول تقنية مبتكرة">Passionate about tech-driven solutions</span>
                 </div>
- 
-                <!--<div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <img class="img-fluid" src="img/20240506_225619-removebg.png" alt="">
-                </div> -->
-
-
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3" style="margin-inline-end: 0.75rem;">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span data-en="Fresh perspectives, adaptable skills" data-ar="رؤى جديدة، مهارات قابلة للتطوير">Fresh perspectives, adaptable skills</span>
+                </div>
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3" style="margin-inline-end: 0.75rem;">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span data-en="Flexible, collaborative, and ready to grow" data-ar=" نعمل بمرونة وتعاون، وجاهزون للنمو والتطور">Flexible, collaborative, and ready to grow</span>
+                </div>
             </div>
+
+            <!--<div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
+                <img class="img-fluid" src="img/20240506_225619-removebg.png" alt="">
+            </div>-->
         </div>
     </div>
-    <!-- Feature End -->
+</div>
+<!-- Feature End -->
+
+
 
 
 
@@ -384,136 +360,101 @@
     </div> -->
     <!-- Case End -->
 
-
-    <!-- FAQs Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
-                <h1 class="mb-4">Frequently Asked Questions</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ1">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    What services do you offer?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    We offer a range of digital services, including website development, app
-                                    development,
-                                    custom software solutions, and systems integration. Our focus is on creating
-                                    user-friendly,
-                                    scalable, and innovative tech solutions.
-                                </div>
+<!-- FAQs Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Popular FAQs" data-ar="الأسئلة الشائعة">Popular FAQs</div>
+            <h1 class="mb-4" data-en="Frequently Asked Questions" data-ar="الأسئلة المتكررة">Frequently Asked Questions</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="accordion" id="accordionFAQ1">
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" data-en="What services do you offer?" data-ar="ماهي الخدمات التي تقدمونها؟">
+                                What services do you offer?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body" data-en="We offer a range of digital services, including website development, app development, custom software solutions, and systems integration. Our focus is on creating user-friendly, scalable, and innovative tech solutions." data-ar="نقدم مجموعة متكاملة من الخدمات الرقمية، تشمل تطوير المواقع الإلكترونية، وتطوير التطبيقات، والحلول البرمجية المخصصة، وتكامل الأنظمة. نركز على تقديم حلول تقنية مبتكرة وسهلة الاستخدام وقابلة للتطوير">
+                                We offer a range of digital services, including website development, app development, custom software solutions, and systems integration. Our focus is on creating user-friendly, scalable, and innovative tech solutions.
                             </div>
                         </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How long does it take to develop a project?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    The timeline depends on the project's scope and complexity. A basic website could
-                                    take a few weeks, while a more intricate app or custom system may take several
-                                    months.
-                                    We work closely with clients to provide a detailed timeline tailored to their needs.
-                                </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-en="How long does it take to develop a project?" data-ar="كم يستغرق تطوير المشروع؟">
+                                How long does it take to develop a project?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body" data-en="The timeline depends on the project's scope and complexity. A basic website could take a few weeks, while a more intricate app or custom system may take several months. We work closely with clients to provide a detailed timeline tailored to their needs." data-ar="المدة تعتمد على حجم وتعقيد المشروع. يمكن أن يستغرق تطوير موقع إلكتروني بسيط بضعة أسابيع، في حين أن تطبيق أو نظام مخصص معقد قد يتطلب عدة أشهر. نعمل عن كثب مع عملائنا لتقديم جدول زمني مفصل ومخصص لاحتياجاتهم">
+                                The timeline depends on the project's scope and complexity. A basic website could take a few weeks, while a more intricate app or custom system may take several months. We work closely with clients to provide a detailed timeline tailored to their needs.
                             </div>
                         </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    What makes your services unique?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    We combine expertise in Computer Science from Sussex University with a passion for harnessing technology to solve real-world challenges. Our approach is flexible and collaborative, ensuring we deliver affordable, tailor-made solutions that align perfectly with your business needs.
-                                </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-en="What makes your services unique?" data-ar="ما الذي يجعل خدماتكم فريدة؟">
+                                What makes your services unique?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body" data-en="We combine expertise in Computer Science from Sussex University with a passion for harnessing technology to solve real-world challenges. Our approach is flexible and collaborative, ensuring we deliver affordable, tailor-made solutions that align perfectly with your business needs." data-ar="نجمع بين الخبرة في علم الحاسوب من جامعة ساسكس وشغفنا باستخدام التكنولوجيا لحل التحديات الواقعية.أسلوبنا مرن وتعاوني، مما يضمن تقديم حلول مبتكرة ومخصصة تتناسب مع احتياجات عملك">
+                                We combine expertise in Computer Science from Sussex University with a passion for harnessing technology to solve real-world challenges. Our approach is flexible and collaborative, ensuring we deliver affordable, tailor-made solutions that align perfectly with your business needs.
                             </div>
                         </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    Can you work within my budget?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Absolutely! We offer a variety of solutions that can fit different budget
-                                    constraints
-                                    without compromising on quality. Let us know your budget, and we will tailor a
-                                    solution
-                                    that works for you.
-                                </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" data-en="Can you work within my budget?" data-ar="هل يمكنكم العمل ضمن ميزانيتي؟">
+                                Can you work within my budget?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body" data-en="Absolutely! We offer a variety of solutions that can fit different budget constraints without compromising on quality. Let us know your budget, and we will tailor a solution that works for you." data-ar="بالتأكيد! نقدم حلولًا تتناسب مع جميع الميزانيات مع الحفاظ على الجودة العالية. فقط أخبرنا بميزانيتك، وسنقوم بتخصيص الحل الأمثل لاحتياجاتك">
+                                Absolutely! We offer a variety of solutions that can fit different budget constraints without compromising on quality. Let us know your budget, and we will tailor a solution that works for you.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ2">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Do you offer ongoing maintenance and support?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Yes! We provide ongoing maintenance and support for all the solutions we build.
-                                    Whether
-                                    you need updates, improvements, or troubleshooting, we’re here to ensure everything
-                                    runs
-                                    smoothly.
-                                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="accordion" id="accordionFAQ2">
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" data-en="Do you offer ongoing maintenance and support?" data-ar="هل تقدمون صيانة ودعم مستمر؟">
+                                Do you offer ongoing maintenance and support?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body" data-en="Yes! We provide ongoing maintenance and support for all the solutions we build. Whether you need updates, improvements, or troubleshooting, we’re here to ensure everything runs smoothly." data-ar="نعم! نقدم صيانة ودعم مستمر لجميع الحلول التي نقوم ببنائها. سواء كنت بحاجة إلى تحديثات أو تحسينات أو حل مشكلات، نحن هنا لضمان استمرارية عمل أنظمتك بسلاسة.">
+                                Yes! We provide ongoing maintenance and support for all the solutions we build. Whether you need updates, improvements, or troubleshooting, we’re here to ensure everything runs smoothly.
                             </div>
                         </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Will my project be mobile-friendly?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Yes! All our websites and apps are designed with a mobile-first approach to ensure
-                                    they look and perform well on all devices, from smartphones to desktops.
-                                </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" data-en="Will my project be mobile-friendly?" data-ar="هل سيكون مشروعي متوافقًا مع الأجهزة المحمولة؟">
+                                Will my project be mobile-friendly?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body" data-en="Yes! All our websites and apps are designed with a mobile-first approach to ensure they look and perform well on all devices, from smartphones to desktops." data-ar="نعم، جميع مواقعنا وتطبيقاتنا مصممة لتكون متوافقة مع الأجهزة المحمولة، لضمان أداء ممتاز ومظهر مناسب على جميع الأجهزة من الهواتف الذكية إلى أجهزة الكمبيوتر">
+                                Yes! All our websites and apps are designed with a mobile-first approach to ensure they look and perform well on all devices, from smartphones to desktops.
                             </div>
                         </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Do you work with international clients?
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Yes, we collaborate with clients globally! Although based in the UK and Palestine,
-                                    we
-                                    have worked on projects with clients from different countries and are flexible in
-                                    accommodating various time zones and cultural needs.
-                                </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" data-en="Do you work with international clients?" data-ar="هل تتعاملون مع عملاء دوليين؟">
+                                Do you work with international clients?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body" data-en="Yes, we collaborate with clients globally! Although based in the UK and Palestine, we have worked on projects with clients from different countries and are flexible in accommodating various time zones and cultural needs." data-ar="نعم، نتعاون مع العملاء عالميًا! على الرغم من أننا نتواجد في المملكة المتحدة وفلسطين، إلا أننا عملنا على مشاريع مع عملاء من دول مختلفة ونتمتع بالمرونة لاستيعاب مختلف المناطق الزمنية والاحتياجات الثقافية.">
+                                Yes, we collaborate with clients globally! Although based in the UK and Palestine, we have worked on projects with clients from different countries and are flexible in accommodating various time zones and cultural needs.
                             </div>
                         </div>
                     </div>
@@ -521,53 +462,43 @@
             </div>
         </div>
     </div>
-    <!-- FAQs End -->
+</div>
+<!-- FAQs End -->
+
 
     <!-- Team Start -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
-                    <h1 class="mb-4">Meet Our Team of Passionate Tech Innovators</h1>
-                    <p class="mb-4">We are Computer Science graduates from Sussex University in the UK, 
-                        with deep roots in Ramallah. 
-                        Our robust passion for technology and extensive experience across diverse projects fuel our drive to create impactful digital solutions. 
-                        Equipped with a fresh perspective and adaptable skills, We are eager to push the boundaries with transformative digital solutions, harnessing our expertise to pioneer new advancements.</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-item bg-white text-center rounded p-4 pt-0 d-flex flex-column"
-                                style="min-height: 100%;">
-                                <img class="img-fluid rounded-circle p-4" src="img/philip.jpeg" alt="">
-                                <h5 class="mb-0">Philip Malouf</h5>
-                                <small>Co-Founder</small>
-                                <div class="d-flex justify-content-center mt-auto">
-                                    <a class="btn btn-square btn-primary m-1"
-                                        href="https://www.instagram.com/philipmalouf55/"><i
-                                            class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary m-1"
-                                        href="https://www.linkedin.com/in/philip-malouf-1b5789333/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Our Team" data-ar="فريقنا">Our Team</div>
+                <h1 class="mb-4" data-en="Meet Our Team of Passionate Tech Innovators" data-ar="تعرف على فريقنا من المبتكرين التقنيين ">Meet Our Team of Passionate Tech Innovators</h1>
+                <p class="mb-4" data-en="We are a dedicated team of Computer Science professionals with a passion for technology. Our experience spans diverse projects, enabling us to create impactful and innovative digital solutions. With adaptable skills and a fresh perspective, we are committed to delivering transformative technologies that meet the evolving needs of our clients." 
+                data-ar="نحن فريق متخصص في علوم الحاسوب، شغوفون بالتكنولوجيا. لدينا خبرة واسعة في مشاريع متنوعة، مما يمكننا من تقديم حلول رقمية مبتكرة وفعالة. بفضل مهاراتنا المرنة ورؤيتنا المتجددة، نلتزم بتقديم تقنيات تحويلية تلبي احتياجات عملائنا المتغيرة.">
+                We are a dedicated team of Computer Science professionals with a passion for technology. Our experience spans diverse projects, enabling us to create impactful and innovative digital solutions. With adaptable skills and a fresh perspective, we are committed to delivering transformative technologies that meet the evolving needs of our clients. </p>
+                <a class="btn btn-primary rounded-pill px-4" href="" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="team-item bg-white text-center rounded p-4 pt-0 d-flex flex-column" style="min-height: 100%;">
+                            <img class="img-fluid rounded-circle p-4" src="img/philip.jpeg" alt="">
+                            <h5 class="mb-0" data-en="Philip Malouf" data-ar="فيليب معلوف">Philip Malouf</h5>
+                            <small data-en="Co-Founder" data-ar="الشريك المؤسس">Co-Founder</small>
+                            <div class="d-flex justify-content-center mt-auto">
+                                <a class="btn btn-square btn-primary m-1" href="https://www.instagram.com/philipmalouf55/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary m-1" href="https://www.linkedin.com/in/philip-malouf-1b5789333/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="team-item bg-white text-center rounded p-4 pt-0 d-flex flex-column"
-                                style="min-height: 100%;">
-                                <img class="img-fluid rounded-circle p-4" src="img/cropped-Ramzi.jpg" alt="">
-                                <h5 class="mb-0">Ramzi Daher</h5>
-                                <small>Co-Founder</small>
-                                <div class="d-flex justify-content-center mt-auto">
-                                    <a class="btn btn-square btn-primary m-1"
-                                        href="https://www.linkedin.com/in/ramzidaher/"><i
-                                            class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary m-1"
-                                        href="https://www.instagram.com/ramzidaher/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="team-item bg-white text-center rounded p-4 pt-0 d-flex flex-column" style="min-height: 100%;">
+                            <img class="img-fluid rounded-circle p-4" src="img/cropped-Ramzi.jpg" alt="">
+                            <h5 class="mb-0" data-en="Ramzi Daher" data-ar="رمزي ضاهر">Ramzi Daher</h5>
+                            <small data-en="Co-Founder" data-ar="الشريك المؤسس">Co-Founder</small>
+                            <div class="d-flex justify-content-center mt-auto">
+                                <a class="btn btn-square btn-primary m-1" href="https://www.instagram.com/ramzidaher/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary m-1" href="https://www.linkedin.com/in/ramzidaher/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -575,19 +506,9 @@
             </div>
         </div>
     </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Team End -->
 
     <!-- Testimonial Start -->
     <!-- <div class="container-xxl py-5">
@@ -653,115 +574,93 @@
     <!-- Testimonial End -->
 
 
-    <!-- Get In Touch Start -->
-    <div class="container-fluid bg-primary py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid" src="img/newsletter.png" alt="Contact Us">
-                </div>
-                <div class="col-md-7 py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Get in Touch</div>
-                    <h1 class="text-white mb-4">We'd Love to Hear From You!</h1>
-                    <p class="text-white-50 mb-4">Feel free to reach out to us with any questions or inquiries. We're
-                        here
-                        to help!</p>
+   <!-- Get In Touch Start -->
+<div class="container-fluid bg-primary py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+                <img class="img-fluid flip-icon" src="img/newsletter.png" alt="Contact Us" data-en="Contact Us" data-ar="اتصل بنا">
+            </div>
+            <div class="col-md-7 py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</div>
+                <h1 class="text-white mb-4" data-en="We'd Love to Hear From You!" data-ar="نحن نحب أن نسمع منك!">We'd Love to Hear From You!</h1>
+                <p class="text-white-50 mb-4" data-en="Feel free to reach out to us with any questions or inquiries. We're here to help!" data-ar="لا تتردد في التواصل معنا لطرح أي أسئلة أو استفسارات. نحن هنا لمساعدتك!">Feel free to reach out to us with any questions or inquiries. We're here to help!</p>
 
-                    <form id="contactForm" method="POST"
-                        action="https://2d69-85-255-236-130.ngrok-free.app/contact_form_handler.php">
-                        <div class="position-relative w-100 mt-3 mb-2">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                placeholder="Enter Your Name" name="name" required style="height: 48px;">
-                        </div>
-                        <div class="position-relative w-100 mt-3 mb-2">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
-                                placeholder="Enter Your Email" name="email" required style="height: 48px;">
-                        </div>
-                        <div class="position-relative w-100 mt-3 mb-2">
-                            <textarea class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                                placeholder="Enter Your Message" name="message" required
-                                style="height: 100px;"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-light rounded-pill text-primary px-4 py-2 mt-3">Send
-                            Message</button>
-                    </form>
-
-
-
-                </div>
+                <form id="contactForm" method="POST" action="https://2d69-85-255-236-130.ngrok-free.app/contact_form_handler.php">
+                    <div class="position-relative w-100 mt-3 mb-2">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Name" name="name" required style="height: 48px;" data-en="Enter Your Name" data-ar="أدخل اسمك">
+                    </div>
+                    <div class="position-relative w-100 mt-3 mb-2">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Enter Your Email" name="email" required style="height: 48px;" data-en="Enter Your Email" data-ar="أدخل بريدك الإلكتروني">
+                    </div>
+                    <div class="position-relative w-100 mt-3 mb-2">
+                        <textarea class="form-control border-0 rounded-pill w-100 ps-4 pe-5" placeholder="Enter Your Message" name="message" required style="height: 100px;" data-en="Enter Your Message" data-ar="أدخل رسالتك"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light rounded-pill text-primary px-4 py-2 mt-3" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Get In Touch End -->
+</div>
+<!-- Get In Touch End -->
 
 
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">Pal<span class="text-primary">DEV</h1>
-                    </a>
-                    <p class="mb-0">We are two Computer Science graduates passionate
-                        about using technology to turn your
-                        ideas into digital solutions. Whether it's web, app, or custom
-                        software development, we’re here
-                        to
-                        help bring your vision to life.</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com
-                    </p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social"
-                            href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social"
-                            href="https://www.linkedin.com/in/paldevtechnologies/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <!-- <a class="btn btn-link" href="#">Privacy Policy</a> -->
-                    <!-- <a class="btn btn-link" href="#">Terms & Conditions</a> -->
-                    <!-- <a class="btn btn-link" href="#">Careers</a> -->
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="text-white mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="#">App Development</a>
-                    <a class="btn btn-link" href="#">Web Development</a>
-                    <a class="btn btn-link" href="#">Custom Software Solutions</a>
-                    <a class="btn btn-link" href="#">Systems Integration</a>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5" dir="">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3 wow fadeIn text-end text-lg-start" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <h1 class="text-white">Pal<span class="text-primary">DEV</span></h1>
+                </a>
+                <p class="mb-0" data-en="We are two Computer Science graduates passionate about using technology to turn your ideas into digital solutions. Whether it's web, app, or custom software development, we’re here to help bring your vision to life."
+                   data-ar="نحن خريجان من علوم الحاسوب متحمسان لاستخدام التكنولوجيا لتحويل أفكارك إلى حلول رقمية. سواء كان الأمر يتعلق بتطوير الويب أو التطبيقات أو البرمجيات المخصصة، نحن هنا للمساعدة في تحقيق رؤيتك.">
+                   نحن خريجان من علوم الحاسوب متحمسان لاستخدام التكنولوجيا لتحويل أفكارك إلى حلول رقمية. سواء كان الأمر يتعلق بتطوير الويب أو التطبيقات أو البرمجيات المخصصة، نحن هنا للمساعدة في تحقيق رؤيتك.
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.3s">
+                <h5 class="text-white mb-4" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</h5>
+                <p class="text-end"><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com</p>
+                <div class="d-flex pt-2 justify-content-end">
+                    <a class="btn btn-outline-light btn-social ms-2" href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social ms-2" href="https://www.linkedin.com/in/paldevtechnologies/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.5s">
+                <h5 class="text-white mb-4" data-en="Popular Links" data-ar="روابط شائعة">روابط شائعة</h5>
+                <a class="btn btn-link text-end" href="about.html" data-en="About Us" data-ar="معلومات عنا">معلومات عنا</a>
+                <a class="btn btn-link text-end" href="contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.7s">
+                <h5 class="text-white mb-4" data-en="Our Services" data-ar="خدماتنا">خدماتنا</h5>
+                <a class="btn btn-link text-end" href="#" data-en="App Development" data-ar="تطوير التطبيقات">تطوير التطبيقات</a>
+                <a class="btn btn-link text-end" href="#" data-en="Web Development" data-ar="تطوير المواقع">تطوير المواقع</a>
+                <a class="btn btn-link text-end" href="#" data-en="Custom Software Solutions" data-ar="حلول البرمجيات المخصصة">حلول البرمجيات المخصصة</a>
+                <a class="btn btn-link text-end" href="#" data-en="Systems Integration" data-ar="تكامل الأنظمة">تكامل الأنظمة</a>
+            </div>
         </div>
+    </div>
 
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">PalDEV</a>, All Rights
-                        Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="/">Home</a>
-                            <!-- <a href="#">Cookies</a> -->
-                            <a href="contact.html">Help</a>
-                            <a href="#">FAQs</a>
-                        </div>
+    <div class="container wow fadeIn text-end" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
+                    &copy; <a class="border-bottom text-end" href="#" data-en="PalDEV" data-ar="بال ديف">بال ديف</a>, <span data-en="All Rights Reserved" data-ar="جميع الحقوق محفوظة">جميع الحقوق محفوظة</span>.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu d-flex justify-content-end">
+                        <a href="/" class="ms-3" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
+                        <a href="contact.html" class="ms-3" data-en="Help" data-ar="المساعدة">المساعدة</a>
+                        <a href="#" class="ms-3" data-en="FAQs" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
 
 
@@ -831,6 +730,52 @@
                 });
         });
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the language toggle button
+        const languageToggleButton = document.getElementById('language-toggle');
+
+        // Function to set language
+        function setLanguage(lang) {
+            // Set language in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+
+            // Update the button text to indicate the current language
+            languageToggleButton.innerText = lang === 'en' ? 'Arabic' : 'English';
+
+            // Set the page direction to RTL for Arabic and LTR for English
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // Select all elements with data-en and data-ar attributes
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+
+            // Loop through each element and update its text content
+            elements.forEach(element => {
+                element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+            });
+        }
+
+        // Function to toggle language
+        function toggleLanguage() {
+            // Get the current language from localStorage
+            let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            // Toggle the language variable between 'en' and 'ar'
+            currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+            // Set the new language
+            setLanguage(currentLanguage);
+        }
+
+        // Add an event listener to the button to call the toggleLanguage function when clicked
+        languageToggleButton.addEventListener('click', toggleLanguage);
+
+        // On page load, set the language to the one saved in localStorage, default to 'en'
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        setLanguage(savedLanguage);
+    });
+</script>
+
+
 
 </body>
 
