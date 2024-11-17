@@ -18,7 +18,6 @@
     <meta property="og:description"
         content="Get in touch with PalDev Technologies for all your technology solutions. Contact us for consultations and support.">
     <meta property="og:image" content="https://paldev.tech/images/contact-preview.jpg">
-    <!-- Replace with an actual contact page image URL -->
     <meta property="og:url" content="https://paldev.tech/contact">
     <meta property="og:type" content="website">
 
@@ -28,7 +27,6 @@
     <meta name="twitter:description"
         content="Connect with PalDev Technologies for all your tech needs. Reach out for consultations or support.">
     <meta name="twitter:image" content="https://paldev.tech/images/contact-preview.jpg">
-    <!-- Replace with an actual contact page image URL -->
 
     <!-- Canonical Link -->
     <link rel="canonical" href="https://paldev.tech/contact">
@@ -55,8 +53,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-</head>
 
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 
 <body>
     <!-- Spinner Start -->
@@ -68,143 +71,117 @@
     </div>
     <!-- Spinner End -->
 
-<!-- Navbar Start -->
-<div class="container-fluid sticky-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <a href="index.html" class="navbar-brand">
-                <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
-            </a>
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
+                </a>
 
-            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto">
-                    <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
-                    <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
-                    <a href="service.html" class="nav-item nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
-                    <a href="project.html" class="nav-item nav-link" data-en="Projects" data-ar="مشاريعنا">Projects</a>
-                    <a href="contact.html" class="nav-item nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+                        <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
+                        <a href="service.html" class="nav-item nav-link" data-en="Services"
+                            data-ar="خدماتنا">Services</a>
+                        <a href="project.html" class="nav-item nav-link" data-en="Projects"
+                            data-ar="مشاريعنا">Projects</a>
+                        <a href="contact.html" class="nav-item nav-link" data-en="Contact"
+                            data-ar="اتصل بنا">Contact</a>
+                    </div>
+                    <!-- Language Toggle Button -->
+                    <button type="button" class="btn btn-outline-light ms-3" id="language-toggle"
+                        onclick="toggleLanguage()">Arabic</button>
                 </div>
-                <!-- Language Toggle Button -->
-                <button type="button" class="btn btn-outline-light ms-3" id="language-toggle" onclick="toggleLanguage()">Arabic</button>
-            </div>
-        </nav>
-    </div>
-</div>
-<!-- Navbar End -->
-
-<!-- Hero Start -->
-<div class="container-fluid pt-5 bg-primary hero-header">
-    <div class="container pt-5">
-        <div class="row g-5 pt-5">
-            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                <h1 class="display-4 text-white mb-4 animated slideInRight" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                        <li class="breadcrumb-item"><a class="text-white" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="col-lg-6 align-self-end text-center text-lg-end">
-                <img class="img-fluid" src="img/contact-hero.png" alt="" style="max-height: 300px;">
-            </div>
+            </nav>
         </div>
     </div>
-</div>
-<!-- Hero End -->
+    <!-- Navbar End -->
 
-<!-- Contact Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</div>
-            <h1 class="mb-4" data-en="Got a Project in Mind? Let's Connect!" data-ar="هل لديك مشروع في ذهنك؟ لنتواصل!">Got a Project in Mind? Let's Connect!</h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="wow fadeIn" data-wow-delay="0.3s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name" data-en="Your Name" data-ar="اسمك">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email" data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message" data-en="Message" data-ar="رسالة">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight" data-en="Contact Us" data-ar="اتصل بنا">
+                        Contact Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html" data-en="Home"
+                                    data-ar="الرئيسية">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page" data-en="Contact Us"
+                                data-ar="اتصل بنا">Contact Us</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="img/contact-hero.png" alt="" style="max-height: 300px;">
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Contact End -->
+    <!-- Hero End -->
 
-<script>
-    // Function to toggle between English and Arabic
-    function toggleLanguage() {
-        const currentLang = document.documentElement.getAttribute('lang');
-        const newLang = currentLang === 'en' ? 'ar' : 'en';
-        setLanguage(newLang);
-
-        // Save the user's language preference in local storage
-        localStorage.setItem('preferredLanguage', newLang);
-    }
-
-    // Function to set the language for the entire page
-    function setLanguage(lang) {
-        // Update HTML lang attribute and direction
-        document.documentElement.setAttribute('lang', lang);
-        document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-        // Update all text content based on data attributes
-        document.querySelectorAll('[data-en][data-ar]').forEach(element => {
-            element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-        });
-
-        // Update the button text
-        const langToggle = document.getElementById('language-toggle');
-        if (langToggle) {
-            langToggle.textContent = lang === 'ar' ? 'English' : 'Arabic';
-        }
-    }
-
-    // Load the user's language preference on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
-        setLanguage(preferredLanguage);
-    });
-</script>
-
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Contact Us"
+                    data-ar="اتصل بنا">Contact Us</div>
+                <h1 class="mb-4" data-en="Got a Project in Mind? Let's Connect!"
+                    data-ar="هل لديك مشروع في ذهنك؟ لنتواصل!">Got a Project in Mind? Let's Connect!</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="wow fadeIn" data-wow-delay="0.3s">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Your Name" required>
+                                        <label for="name" data-en="Your Name" data-ar="اسمك">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Your Email" required>
+                                        <label for="email" data-en="Your Email" data-ar="بريدك الإلكتروني">Your
+                                            Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject"
+                                            placeholder="Subject" required>
+                                        <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                            name="message" style="height: 150px" required></textarea>
+                                        <label for="message" data-en="Message" data-ar="رسالة">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary w-100 py-3" id="sendButton"
+                                        data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -219,49 +196,93 @@
     <script src="js/main.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the language toggle button
-            const languageToggleButton = document.getElementById('language-toggle');
-    
-            // Function to set language
-            function setLanguage(lang) {
-                // Set language in localStorage
-                localStorage.setItem('selectedLanguage', lang);
-    
-                // Update the button text to indicate the current language
-                languageToggleButton.innerText = lang === 'en' ? 'Arabic' : 'English';
-    
-                // Set the page direction to RTL for Arabic and LTR for English
-                document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-    
-                // Select all elements with data-en and data-ar attributes
-                const elements = document.querySelectorAll('[data-en][data-ar]');
-    
-                // Loop through each element and update its text content
-                elements.forEach(element => {
-                    element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+        document.getElementById("sendButton").addEventListener("click", async function () {
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const subject = document.querySelector('input[name="subject"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+
+            if (!name || !email || !subject || !message) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    text: 'Please fill out all fields!',
+                });
+                return;
+            }
+
+            try {
+                const response = await fetch('https://enchanting-gaufre-11e46b.netlify.app/.netlify/functions/contact-function', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, subject, message }),
+                });
+
+                const result = await response.text();
+                console.log('Response:', result);
+
+                if (response.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Message Sent!',
+                        text: 'Your message has been sent successfully!',
+                    });
+                    document.getElementById("contactForm").reset();
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: `Error sending email: ${result}`,
+                    });
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: `Error sending email: ${error.message}`,
                 });
             }
-    
-            // Function to toggle language
-            function toggleLanguage() {
-                // Get the current language from localStorage
-                let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
-                // Toggle the language variable between 'en' and 'ar'
-                currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-                // Set the new language
-                setLanguage(currentLanguage);
-            }
-    
-            // Add an event listener to the button to call the toggleLanguage function when clicked
-            languageToggleButton.addEventListener('click', toggleLanguage);
-    
-            // On page load, set the language to the one saved in localStorage, default to 'en'
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-            setLanguage(savedLanguage);
         });
     </script>
-    
+
+    <script>
+        // Function to toggle between English and Arabic
+        function toggleLanguage() {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            setLanguage(newLang);
+
+            // Save the user's language preference in local storage
+            localStorage.setItem('preferredLanguage', newLang);
+        }
+
+        // Function to set the language for the entire page
+        function setLanguage(lang) {
+            // Update HTML lang attribute and direction
+            document.documentElement.setAttribute('lang', lang);
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // Update all text content based on data attributes
+            document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+                element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+            });
+
+            // Update the button text
+            const langToggle = document.getElementById('language-toggle');
+            if (langToggle) {
+                langToggle.textContent = lang === 'ar' ? 'English' : 'Arabic';
+            }
+        }
+
+        // Load the user's language preference on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            setLanguage(preferredLanguage);
+        });
+    </script>
 </body>
 
 </html>
