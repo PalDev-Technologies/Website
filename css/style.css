@@ -29,11 +29,17 @@
 }
 
 /*** Heading ***/
-h1, h2, h3, .fw-bold {
+h1,
+h2,
+h3,
+.fw-bold {
     font-weight: 700 !important;
 }
 
-h4, h5, h6, .fw-medium {
+h4,
+h5,
+h6,
+.fw-medium {
     font-weight: 500 !important;
 }
 
@@ -58,7 +64,9 @@ h4, h5, h6, .fw-medium {
     height: 48px;
 }
 
-.btn-square, .btn-sm-square, .btn-lg-square {
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
     padding: 0;
     display: flex;
     align-items: center;
@@ -91,7 +99,8 @@ h4, h5, h6, .fw-medium {
     font-size: 16px;
 }
 
-.navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
     color: rgba(255, 255, 255, 1);
 }
 
@@ -142,7 +151,8 @@ h4, h5, h6, .fw-medium {
     background-color: transparent;
     font-size: 16px;
     list-style: none;
-    justify-content: flex-start; /* Default alignment for LTR */
+    justify-content: flex-start;
+    /* Default alignment for LTR */
 }
 
 .breadcrumb-item {
@@ -151,23 +161,27 @@ h4, h5, h6, .fw-medium {
     color: #fff;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     content: "/";
-    margin: 0 8px; /* Add consistent spacing around the separator */
-    color: #fff; /* Ensure separator matches breadcrumb text color */
+    margin: 0 8px;
+    /* Add consistent spacing around the separator */
+    color: #fff;
+    /* Ensure separator matches breadcrumb text color */
 }
 
 /* RTL Adjustments for Breadcrumb */
 [dir="rtl"] .breadcrumb {
     direction: rtl;
-    justify-content: flex-end; /* Align breadcrumb items properly for RTL */
+    justify-content: flex-end;
+    /* Align breadcrumb items properly for RTL */
 }
 
-[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+[dir="rtl"] .breadcrumb-item+.breadcrumb-item::before {
     content: "/";
     margin: 0 8px;
     color: #fff;
-    transform: rotateY(180deg); /* Flip the separator for RTL alignment */
+    transform: rotateY(180deg);
+    /* Flip the separator for RTL alignment */
 }
 
 [dir="rtl"] .hero-header h1 {
@@ -248,11 +262,13 @@ h4, h5, h6, .fw-medium {
     background: #FFFFFF;
 }
 
-.service-item h5, .service-item p {
+.service-item h5,
+.service-item p {
     transition: .5s;
 }
 
-.service-item:hover h5, .service-item:hover p {
+.service-item:hover h5,
+.service-item:hover p {
     color: #FFFFFF;
 }
 
@@ -310,7 +326,8 @@ h4, h5, h6, .fw-medium {
     align-items: center;
 }
 
-.testimonial-carousel .owl-nav .owl-prev, .testimonial-carousel .owl-nav .owl-next {
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
     margin: 5px 0;
     width: 40px;
     height: 40px;
@@ -325,7 +342,8 @@ h4, h5, h6, .fw-medium {
     transition: .5s;
 }
 
-.testimonial-carousel .owl-nav .owl-prev:hover, .testimonial-carousel .owl-nav .owl-next:hover {
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
     color: #FFFFFF;
 }

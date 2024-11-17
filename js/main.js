@@ -117,7 +117,7 @@ function updateLayoutForRTL(lang) {
     if (breadcrumbNav) {
         breadcrumbNav.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
         const breadcrumbItems = breadcrumbNav.querySelectorAll('.breadcrumb-item');
-        
+
         // Update the breadcrumb separators dynamically
         if (isRTL) {
             breadcrumbItems.forEach((item, index) => {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get current language from URL or default to 'en'
     const urlParams = new URLSearchParams(window.location.search);
     const currentLang = urlParams.get('lang') || 'en';
-    
+
     // Set the language on page load
     setLanguage(currentLang);
 
@@ -155,3 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
         languageToggleButton.addEventListener('click', toggleLanguage);
     }
 });
+
+

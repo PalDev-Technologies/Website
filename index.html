@@ -6,6 +6,7 @@
     <title>PalDev Technologies | Code Your Vision Into Reality</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="PalDev Technologies offers innovative digital solutions for web development, app creation, and custom software. Let’s turn your ideas into impactful technology.">
@@ -67,6 +68,8 @@
 </head>
 
 
+
+
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
@@ -79,19 +82,22 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
+    <div class="container-fluid sticky-top" id="navbar-container">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="index.html" class="navbar-brand">
-                    <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0 align-items-center">
+                <!-- Logo -->
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 700px;">
                 </a>
 
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
+                <!-- Hamburger Menu -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Collapsible Menu -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
+                    <div class="navbar-nav ms-auto align-items-center">
                         <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
                         <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
                         <a href="service.html" class="nav-item nav-link" data-en="Services"
@@ -100,15 +106,33 @@
                             data-ar="مشاريعنا">Projects</a>
                         <a href="contact.html" class="nav-item nav-link" data-en="Contact"
                             data-ar="اتصل بنا">Contact</a>
+
+                        <!-- Language Toggle for Smaller Screens -->
+                        <div class="d-lg-none mt-3 mb-3">
+                            <button type="button" class="btn btn-outline-light" id="language-toggle-mobile"
+                                onclick="toggleLanguage()">
+                                Arabic
+                            </button>
+                        </div>
                     </div>
-                    <!-- Language Toggle Button -->
-                    <button type="button" class="btn btn-outline-light ms-3" id="language-toggle"
-                        onclick="toggleLanguage()">Arabic</button>
+
+                    <!-- Language Toggle for Larger Screens -->
+                    <div class="ms-lg-3 mt-3 mt-lg-0 d-none d-lg-block">
+                        <button type="button" class="btn btn-outline-light" id="language-toggle"
+                            onclick="toggleLanguage()">
+                            Arabic
+                        </button>
+                    </div>
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
+
+
+
+
+
 
 
 
@@ -858,8 +882,31 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarCollapse = document.getElementById('navbarCollapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+
+            navbarToggler.addEventListener('click', function () {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.style.height = 0;
+                } else {
+                    navbarCollapse.style.height = navbarCollapse.scrollHeight + 'px';
+                }
+            });
+
+            // Reset height when collapsing
+            navbarCollapse.addEventListener('transitionend', function () {
+                if (!navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.style.height = '';
+                }
+            });
+        });
+
+    </script>
     <!-- Include SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         document.getElementById("sendButton").addEventListener("click", async function () {
             const name = document.querySelector('input[name="name"]').value;
