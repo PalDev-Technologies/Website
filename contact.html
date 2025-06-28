@@ -126,62 +126,94 @@
         </div>
     </div>
     <!-- Hero End -->
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Contact Us"
-                    data-ar="اتصل بنا">Contact Us</div>
-                <h1 class="mb-4" data-en="Got a Project in Mind? Let's Connect!"
-                    data-ar="هل لديك مشروع في ذهنك؟ لنتواصل!">Got a Project in Mind? Let's Connect!</h1>
+<!-- Get In Touch Start (Updated with SweetAlert2) -->
+<div class="container-fluid bg-primary py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-5 text-start">
+                <img class="img-fluid" src="img/newsletter.png" alt="Contact Us" style="max-width: 100%; height: auto;">
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Your Name" required>
-                                        <label for="name" data-en="Your Name" data-ar="اسمك">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="Your Email" required>
-                                        <label for="email" data-en="Your Email" data-ar="بريدك الإلكتروني">Your
-                                            Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" name="subject"
-                                            placeholder="Subject" required>
-                                        <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            name="message" style="height: 150px" required></textarea>
-                                        <label for="message" data-en="Message" data-ar="رسالة">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-primary w-100 py-3" id="sendButton"
-                                        data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+            <div class="col-md-7">
+                <h6 class="text-white text-uppercase mb-3">Get in Touch</h6>
+                <h1 class="text-white mb-3">We'd Love to Hear From You!</h1>
+                <p class="text-white-50 mb-4">Let us know how we can help—just drop a message below.</p>
+
+                <form id="contactForm">
+                    <!-- Hidden Configuration Inputs -->
+                    <input type="hidden" name="_subject" value="📩 New Message via Paldev Contact Form">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label text-white">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-white">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label text-white">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Let's discuss a project" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label text-white">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light text-primary px-4">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Get In Touch End -->
+
+<!-- SweetAlert2 Script -->
+<script>
+    document.getElementById("contactForm").addEventListener("submit", async function (e) {
+        e.preventDefault(); // Prevent normal form submission
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/info@paldev.tech", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            });
+
+            if (response.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: 'Thanks for reaching out — we’ll be in touch shortly.',
+                    confirmButtonColor: '#3085d6'
+                });
+                form.reset();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops!',
+                    text: 'Something went wrong. Please try again later.',
+                    confirmButtonColor: '#d33'
+                });
+            }
+        } catch (err) {
+            console.error(err);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Network issue or spam protection triggered.',
+                confirmButtonColor: '#d33'
+            });
+        }
+    });
+</script>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
