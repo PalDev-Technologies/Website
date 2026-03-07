@@ -38,7 +38,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -74,26 +74,24 @@
     <!-- Spinner End -->
 
 <!-- Navbar Start -->
-<div class="container-fluid sticky-top">
+<div class="container-fluid sticky-top" id="navbar-container">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <a href="index.html" class="navbar-brand">
-                <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 600px;">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0 align-items-center">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/logoo.svg" alt="PalDev Technologies" class="logo" style="max-width: 100%; max-height: 42px;">
             </a>
-
-            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto">
-                    <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
-                    <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                    <a href="about.html" class="nav-item nav-link active" data-en="About" data-ar="من نحن">About</a>
                     <a href="service.html" class="nav-item nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
                     <a href="project.html" class="nav-item nav-link" data-en="Projects" data-ar="مشاريعنا">Projects</a>
                     <a href="contact.html" class="nav-item nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
                 </div>
-                <!-- Language Toggle Button -->
-                <button type="button" class="btn btn-outline-light ms-3" id="language-toggle" onclick="toggleLanguage()">Arabic</button>
+                <a href="ar/about.html" class="btn btn-outline-light ms-lg-3 mt-3 mt-lg-0">العربية</a>
             </div>
         </nav>
     </div>
@@ -101,21 +99,19 @@
 <!-- Navbar End -->
 
 <!-- Hero Start -->
-<div class="container-fluid pt-5 bg-primary hero-header" dir="auto">
-    <div class="container pt-5">
-        <div class="row g-5 pt-5">
-            <div class="col-lg-6 align-self-center mb-lg-5">
-                <h1 class="display-4 text-white mb-4 animated slideInRight hero-title" data-en="About Us" data-ar="من نحن">About Us</h1>
-                <nav aria-label="breadcrumb" class="breadcrumb-nav">
-                    <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                        <li class="breadcrumb-item"><a class="text-white" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li class="breadcrumb-item"><a class="text-white" href="#" data-en="Pages" data-ar=" الصفحات ">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page" data-en="About Us" data-ar=" من نحن">About Us</li>
+<div class="container-fluid hero-header hero-header--page" dir="auto">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center min-vh-50">
+            <div class="col-12 col-lg-8 align-self-center mb-lg-0">
+                <p class="hero__badge mb-3" data-en="Who We Are" data-ar="من نحن">Who We Are</p>
+                <h1 class="hero__title mb-4" data-en="We Turn Ideas Into Digital Reality" data-ar="نحوّل الأفكار إلى واقع رقمي">We Turn Ideas Into Digital Reality</h1>
+                <p class="hero__text mb-4" data-en="A dedicated team of technologists building custom software, web, and mobile solutions that drive growth and efficiency for businesses worldwide." data-ar="فريق متخصص من التقنيين يبني حلول برمجيات ومواقع وتطبيقات مخصصة تدعم النمو والكفاءة للشركات حول العالم.">A dedicated team of technologists building custom software, web, and mobile solutions that drive growth and efficiency for businesses worldwide.</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a class="text-white opacity-75" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page" data-en="About" data-ar="من نحن">About</li>
                     </ol>
                 </nav>
-            </div>
-            <div class="col-lg-6 align-self-end text-center text-lg-end">
-                <img class="img-fluid hero-img" src="img/hero-img.png" alt="About Us Image" style="max-height: 300px;">
             </div>
         </div>
     </div>
@@ -149,214 +145,124 @@
 
 
    <!-- About Start -->
-<div class="container-fluid py-5">
-    <div class="container">
+<section class="section section--white">
+    <div class="section__inner">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="about-img">
-                    <img class="img-fluid" src="img/about-img.jpg" alt="About Us Image">
+                <div class="about__media">
+                    <img class="img-fluid" src="img/about-img.jpg" alt="PalDev Technologies team">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="About Us" data-ar="من نحن">About Us</div>
-                <h1 class="mb-4" data-en="We Make Your Vision Come To Life" data-ar=" نجعل رؤيتك واقعًا">We Make Your Vision Come To Life</h1>
-                <p class="mb-4" data-en="As passionate advocates for technological innovation, we are dedicated to using our extensive programming skills to transform abstract ideas into tangible realities. Our commitment as Palestinian tech enthusiasts is to develop cutting-edge solutions that effectively address complex challenges in the digital world." data-ar="نحن ملتزمون بدعم الابتكار التكنولوجي، ونسعى لاستخدام مهاراتنا البرمجية المتقدمة لتحويل الأفكار المجردة إلى حقائق ملموسة. كمتخصصين فلسطينيين في مجال التكنولوجيا، نلتزم بتطوير حلول مبتكرة لمواجهة التحديات الرقمية المعقدة " >As passionate advocates for technological innovation, we are dedicated to using our extensive programming skills to transform abstract ideas into tangible realities. Our commitment as Palestinian tech enthusiasts is to develop cutting-edge solutions that effectively address complex challenges in the digital world.</p>
-                <p class="mb-4" data-en="Whether you have a vision for a project, an app, or any tech-driven concept, we are here to bring it to life with creativity, precision, and cutting-edge tools. Our mission is to collaborate and turn your ideas into impactful, functional, and scalable digital solutions that make a difference. Let’s partner together and create the future!" data-ar="سواء كانت رؤيتك لمشروع، تطبيق، أو فكرة تقنية، نحن هنا لجعلها حقيقة باستخدام الإبداع والدقة وأحدث الأدوات. مهمتنا هي تحويل أفكارك إلى حلول رقمية ذات تأثير وفعالية وقابلة للتطوير. دعونا نتعاون لنبتكر المستقبل معًا" >Whether you have a vision for a project, an app, or any tech-driven concept, we are here to bring it to life with creativity, precision, and cutting-edge tools. Our mission is to collaborate and turn your ideas into impactful, functional, and scalable digital solutions that make a difference. Let’s partner together and create the future!</p>
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <h6 class="mb-3" data-en="Fresh Perspective" data-ar="رؤية جديدة "><i class="fa fa-check text-primary me-2"></i>Fresh Perspective</h6>
-                        <h6 class="mb-0" data-en="Dedicated Team" data-ar="فريق ملتزم"><i class="fa fa-check text-primary me-2"></i>Dedicated Team</h6>
-                    </div>
-                    <div class="col-sm-6">
-                        <h6 class="mb-3" data-en="Flexible & Available" data-ar="مرن ومتواجد دائمًا"><i class="fa fa-check text-primary me-2"></i>Flexible & Available</h6>
-                        <h6 class="mb-0" data-en="Affordable Solutions" data-ar="حلول بتكلفة مناسبة "><i class="fa fa-check text-primary me-2"></i>Affordable Solutions</h6>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mt-4">
-                    <!-- Read More Button -->
-                    <a class="btn btn-primary rounded-pill px-4 me-4" href="about.html" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
-                    
-                    <!-- Social Media Links -->
-                    <div class="d-flex ms-4">
-                        <a class="btn btn-outline-primary btn-square me-4" href="https://www.instagram.com/paldevtechnologies/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href="https://www.linkedin.com/in/paldevtechnologies/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <span class="section__eyebrow" data-en="Our Story" data-ar="قصتنا">Our Story</span>
+                <h2 class="section__title mb-4" data-en="Partners in Digital Innovation" data-ar="شركاء في الابتكار الرقمي">Partners in Digital Innovation</h2>
+                <p class="mb-4" data-en="We combine deep technical expertise with a client-first mindset. From concept to launch, we deliver scalable, secure, and user-focused solutions that help businesses compete and grow in the digital age." data-ar="نحن ملتزمون بدعم الابتكار التكنولوجي، ونسعى لاستخدام مهاراتنا البرمجية المتقدمة لتحويل الأفكار المجردة إلى حقائق ملموسة. كمتخصصين فلسطينيين في مجال التكنولوجيا، نلتزم بتطوير حلول مبتكرة لمواجهة التحديات الرقمية المعقدة " >We combine deep technical expertise with a client-first mindset. From concept to launch, we deliver scalable, secure, and user-focused solutions that help businesses compete and grow in the digital age.</p>
+                <p class="mb-4" data-en="Whether you need a web application, mobile app, or custom software—we work alongside you to define requirements, architect systems, and deliver on time. Our mission is simple: turn your vision into software that works." data-ar="سواء كانت رؤيتك لمشروع، تطبيق، أو فكرة تقنية، نحن هنا لجعلها حقيقة باستخدام الإبداع والدقة وأحدث الأدوات. مهمتنا هي تحويل أفكارك إلى حلول رقمية ذات تأثير وفعالية وقابلة للتطوير. دعونا نتعاون لنبتكر المستقبل معًا" >Whether you need a web application, mobile app, or custom software—we work alongside you to define requirements, architect systems, and deliver on time. Our mission is simple: turn your vision into software that works.</p>
+                <ul class="about__list list-unstyled mb-4">
+                    <li><i class="fa fa-check text-primary"></i> <span data-en="Client-first approach & transparent communication" data-ar="نهج يركز على العميل وتواصل شفاف">Client-first approach & transparent communication</span></li>
+                    <li><i class="fa fa-check text-primary"></i> <span data-en="Dedicated team with modern tech stack" data-ar="فريق ملتزم بأحدث التقنيات">Dedicated team with modern tech stack</span></li>
+                    <li><i class="fa fa-check text-primary"></i> <span data-en="Flexible engagement & competitive pricing" data-ar="تعاون مرن وأسعار تنافسية">Flexible engagement & competitive pricing</span></li>
+                    <li><i class="fa fa-check text-primary"></i> <span data-en="Scalable, maintainable solutions" data-ar="حلول قابلة للتطوير والصيانة">Scalable, maintainable solutions</span></li>
+                </ul>
+                <div class="d-flex flex-wrap align-items-center gap-3">
+                    <a class="btn btn-primary rounded-pill px-4" href="contact.html" data-en="Start a Project" data-ar="ابدأ مشروعك">Start a Project</a>
+                    <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/paldevtechnologies/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="https://www.linkedin.com/in/paldevtechnologies/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- About End -->
 
 
 
  <!-- Feature Start -->
-<div class="container-fluid bg-primary feature pt-5">
-    <div class="container pt-5">
-        <div class="row g-5">
-            <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</div>
-                <h1 class="text-white mb-4" data-en="Young Talent, Fresh Perspectives" data-ar="مواهب شابة، رؤى جديدة">Young Talent, Fresh Perspectives</h1>
-                <p class="text-light mb-4" data-en="Driven by our passion to transform innovative ideas into technological realities. Our experience encompasses a diverse range of projects across various industries, enabling us to offer uniquely tailored, tech-driven solutions that meet the specific needs of our clients." data-ar="مدفوعون بشغفنا لتحويل الأفكار المبتكرة إلى واقع تقني. تشمل خبراتنا مجموعة واسعة من المشاريع في مختلف الصناعات، مما يمكننا من تقديم حلول تقنية مخصصة لتلبية الاحتياجات المحددة لعملائنا.">Driven by our passion to transform innovative ideas into technological realities. Our experience encompasses a diverse range of projects across various industries, enabling us to offer uniquely tailored, tech-driven solutions that meet the specific needs of our clients.</p>
-                
-                <!-- Updated Checkmark List with Proper Spacing for Both Directions -->
-                <div class="d-flex align-items-center text-white mb-3">
-                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3" style="margin-inline-end: 0.75rem;">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <span data-en="Passionate about tech-driven solutions" data-ar=" ملتزمون بتقديم حلول تقنية مبتكرة">Passionate about tech-driven solutions</span>
-                </div>
-                <div class="d-flex align-items-center text-white mb-3">
-                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3" style="margin-inline-end: 0.75rem;">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <span data-en="Fresh perspectives, adaptable skills" data-ar="رؤى جديدة، مهارات قابلة للتطوير">Fresh perspectives, adaptable skills</span>
-                </div>
-                <div class="d-flex align-items-center text-white mb-3">
-                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3" style="margin-inline-end: 0.75rem;">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <span data-en="Flexible, collaborative, and ready to grow" data-ar=" نعمل بمرونة وتعاون، وجاهزون للنمو والتطور">Flexible, collaborative, and ready to grow</span>
-                </div>
+<section class="feature section--sm">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-8 wow fadeIn" data-wow-delay="0.2s">
+                <span class="feature__eyebrow" data-en="Why PalDev" data-ar="لماذا بالديف">Why PalDev</span>
+                <h2 class="text-white mb-4" data-en="Built to Deliver—On Time, On Budget" data-ar="مصممون للتسليم — في الموعد والميزانية">Built to Deliver—On Time, On Budget</h2>
+                <p class="text-white-50 mb-4" style="max-width: 42rem;" data-en="We focus on clear scope, regular updates, and quality code. Our process is collaborative: we listen, plan, build, and iterate so your product stays aligned with your goals." data-ar="نركز على نطاق واضح وتحديثات دورية وكود عالي الجودة. أسلوبنا تعاوني: نستمع ونخطط ونبني ونحسّن حتى يظل منتجك متوافقًا مع أهدافك.">We focus on clear scope, regular updates, and quality code. Our process is collaborative: we listen, plan, build, and iterate so your product stays aligned with your goals.</p>
+                <ul class="feature__list list-unstyled mb-0">
+                    <li class="feature__item">
+                        <span class="feature__item-icon"><i class="fa fa-check"></i></span>
+                        <span data-en="Proven tech stack & best practices" data-ar="تقنيات مثبتة وأفضل الممارسات">Proven tech stack & best practices</span>
+                    </li>
+                    <li class="feature__item">
+                        <span class="feature__item-icon"><i class="fa fa-check"></i></span>
+                        <span data-en="Agile delivery with transparent timelines" data-ar="تسليم رشيق وجداول زمنية شفافة">Agile delivery with transparent timelines</span>
+                    </li>
+                    <li class="feature__item">
+                        <span class="feature__item-icon"><i class="fa fa-check"></i></span>
+                        <span data-en="Ongoing support & maintenance" data-ar="دعم وصيانة مستمران">Ongoing support & maintenance</span>
+                    </li>
+                </ul>
             </div>
-
-            <!--<div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
-                <img class="img-fluid" src="img/20240506_225619-removebg.png" alt="">
-            </div>-->
         </div>
     </div>
-</div>
+</section>
 <!-- Feature End -->
 
-
-    <!-- Team Start -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3" data-en="Our Team" data-ar="فريقنا">Our Team</div>
-                    <h1 class="mb-4" data-en="Meet Our Team of Passionate Tech Innovators" data-ar="تعرف على فريقنا من المبتكرين التقنيين ">Meet Our Team of Passionate Tech Innovators</h1>
-                    <p class="mb-4" data-en="We are a dedicated team of Computer Science professionals with a passion for technology. Our experience spans diverse projects, enabling us to create impactful and innovative digital solutions. With adaptable skills and a fresh perspective, we are committed to delivering transformative technologies that meet the evolving needs of our clients." 
-                    data-ar="نحن فريق متخصص في علوم الحاسوب، شغوفون بالتكنولوجيا. لدينا خبرة واسعة في مشاريع متنوعة، مما يمكننا من تقديم حلول رقمية مبتكرة وفعالة. بفضل مهاراتنا المرنة ورؤيتنا المتجددة، نلتزم بتقديم تقنيات تحويلية تلبي احتياجات عملائنا المتغيرة.">
-                    We are a dedicated team of Computer Science professionals with a passion for technology. Our experience spans diverse projects, enabling us to create impactful and innovative digital solutions. With adaptable skills and a fresh perspective, we are committed to delivering transformative technologies that meet the evolving needs of our clients. </p>
-                    <a class="btn btn-primary rounded-pill px-4" href="" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-item bg-white text-center rounded p-4 pt-0 d-flex flex-column" style="min-height: 100%;">
-                                <img class="img-fluid rounded-circle p-4" src="img/philip.jpeg" alt="">
-                                <h5 class="mb-0" data-en="Philip Malouf" data-ar="فيليب معلوف">Philip Malouf</h5>
-                                <small data-en="Co-Founder" data-ar="الشريك المؤسس">Co-Founder</small>
-                                <div class="d-flex justify-content-center mt-auto">
-                                    <a class="btn btn-square btn-primary m-1" href="https://www.instagram.com/philipmalouf55/"><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary m-1" href="https://www.linkedin.com/in/philip-malouf-1b5789333/"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="team-item bg-white text-center rounded p-4 pt-0 d-flex flex-column" style="min-height: 100%;">
-                                <img class="img-fluid rounded-circle p-4" src="img/cropped-Ramzi.jpg" alt="">
-                                <h5 class="mb-0" data-en="Ramzi Daher" data-ar="رمزي ضاهر">Ramzi Daher</h5>
-                                <small data-en="Co-Founder" data-ar="الشريك المؤسس">Co-Founder</small>
-                                <div class="d-flex justify-content-center mt-auto">
-                                    <a class="btn btn-square btn-primary m-1" href="https://www.instagram.com/ramzidaher/"><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary m-1" href="https://www.linkedin.com/in/ramzidaher/"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Team End -->
-
-    <!-- Get In Touch Start -->
-    <div class="container-fluid bg-primary py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid flip-icon" src="img/newsletter.png" alt="Contact Us" data-en="Contact Us" data-ar="اتصل بنا">
-                </div>
-                <div class="col-md-7 py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</div>
-                    <h1 class="text-white mb-4" data-en="We'd Love to Hear From You!" data-ar="نحن نحب أن نسمع منك!">We'd Love to Hear From You!</h1>
-                    <p class="text-white-50 mb-4" data-en="Feel free to reach out to us with any questions or inquiries. We're here to help!" data-ar="لا تتردد في التواصل معنا لطرح أي أسئلة أو استفسارات. نحن هنا لمساعدتك!">Feel free to reach out to us with any questions or inquiries. We're here to help!</p>
-    
-                    <form id="contactForm" method="POST" action="https://2d69-85-255-236-130.ngrok-free.app/contact_form_handler.php">
-                        <div class="position-relative w-100 mt-3 mb-2">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Name" name="name" required style="height: 48px;" data-en="Enter Your Name" data-ar="أدخل اسمك">
-                        </div>
-                        <div class="position-relative w-100 mt-3 mb-2">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Enter Your Email" name="email" required style="height: 48px;" data-en="Enter Your Email" data-ar="أدخل بريدك الإلكتروني">
-                        </div>
-                        <div class="position-relative w-100 mt-3 mb-2">
-                            <textarea class="form-control border-0 rounded-pill w-100 ps-4 pe-5" placeholder="Enter Your Message" name="message" required style="height: 100px;" data-en="Enter Your Message" data-ar="أدخل رسالتك"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-light rounded-pill text-primary px-4 py-2 mt-3" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Get In Touch End -->
-
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-white-50 footer pt-5" dir="">
+<!-- Footer -->
+    <footer class="footer" dir="">
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-md-6 col-lg-3 wow fadeIn text-end text-lg-start" data-wow-delay="0.1s">
-                <a href="index.html" class="d-inline-block mb-3">
-                    <h1 class="text-white">Pal<span class="text-primary">DEV</span></h1>
-                </a>
-                <p class="mb-0" data-en="We are two Computer Science graduates passionate about using technology to turn your ideas into digital solutions. Whether it's web, app, or custom software development, we’re here to help bring your vision to life."
-                   data-ar="نحن خريجان من علوم الحاسوب متحمسان لاستخدام التكنولوجيا لتحويل أفكارك إلى حلول رقمية. سواء كان الأمر يتعلق بتطوير الويب أو التطبيقات أو البرمجيات المخصصة، نحن هنا للمساعدة في تحقيق رؤيتك.">
-                   نحن خريجان من علوم الحاسوب متحمسان لاستخدام التكنولوجيا لتحويل أفكارك إلى حلول رقمية. سواء كان الأمر يتعلق بتطوير الويب أو التطبيقات أو البرمجيات المخصصة، نحن هنا للمساعدة في تحقيق رؤيتك.
-                </p>
+                <div class="col-md-6 col-lg-3 wow fadeIn text-lg-start" data-wow-delay="0.1s">
+                    <a href="index.html" class="footer__brand d-inline-block">Pal<span>Dev</span></a>
+                <p class="footer__text mb-0"
+                        data-en="PalDev Technologies delivers innovative digital solutions for businesses. From web and app development to custom software and systems integration, we help you bring your vision to life with scalable, professional products."
+                   data-ar="تقدم PalDev Technologies حلولاً رقمية مبتكرة للشركات. من تطوير المواقع والتطبيقات إلى البرمجيات المخصصة وتكامل الأنظمة، نساعدك في تحقيق رؤيتك بمنتجات احترافية وقابلة للتطوير.">
+                        PalDev Technologies delivers innovative digital solutions for businesses. From web and app development to custom software and systems integration, we help you bring your vision to life with scalable, professional products.
+                    </p>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.3s">
-                <h5 class="text-white mb-4" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</h5>
-                <p class="text-end"><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com</p>
-                <div class="d-flex pt-2 justify-content-end">
-                    <a class="btn btn-outline-light btn-social ms-2" href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social ms-2" href="https://www.linkedin.com/in/paldevtechnologies/"><i class="fab fa-linkedin-in"></i></a>
+                <h5 class="footer__heading text-white mb-4" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h5>
+                    <p class="text-end"><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com</p>
+                    <div class="d-flex pt-2 justify-content-end">
+                        <a class="btn btn-outline-light btn-social ms-2"
+                            href="https://www.instagram.com/paldevtechnologies/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social ms-2"
+                            href="https://www.linkedin.com/in/paldevtechnologies/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.5s">
-                <h5 class="text-white mb-4" data-en="Popular Links" data-ar="روابط شائعة">روابط شائعة</h5>
-                <a class="btn btn-link text-end" href="about.html" data-en="About Us" data-ar="معلومات عنا">معلومات عنا</a>
-                <a class="btn btn-link text-end" href="contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.7s">
-                <h5 class="text-white mb-4" data-en="Our Services" data-ar="خدماتنا">خدماتنا</h5>
-                <a class="btn btn-link text-end" href="#" data-en="App Development" data-ar="تطوير التطبيقات">تطوير التطبيقات</a>
-                <a class="btn btn-link text-end" href="#" data-en="Web Development" data-ar="تطوير المواقع">تطوير المواقع</a>
-                <a class="btn btn-link text-end" href="#" data-en="Custom Software Solutions" data-ar="حلول البرمجيات المخصصة">حلول البرمجيات المخصصة</a>
-                <a class="btn btn-link text-end" href="#" data-en="Systems Integration" data-ar="تكامل الأنظمة">تكامل الأنظمة</a>
+                <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.5s">
+                    <h5 class="footer__heading text-white mb-4" data-en="Popular Links" data-ar="روابط شائعة">Popular Links</h5>
+                    <a class="btn btn-link text-end" href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a>
+                    <a class="btn btn-link text-end" href="contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.7s">
+                    <h5 class="footer__heading text-white mb-4" data-en="Our Services" data-ar="خدماتنا">Our Services</h5>
+                    <a class="btn btn-link text-end" href="service.html" data-en="App Development" data-ar="تطوير التطبيقات">App Development</a>
+                    <a class="btn btn-link text-end" href="service.html" data-en="Web Development" data-ar="تطوير المواقع">Web Development</a>
+                    <a class="btn btn-link text-end" href="service.html" data-en="Custom Software Solutions"
+                        data-ar="حلول البرمجيات المخصصة">Custom Software Solutions</a>
+                    <a class="btn btn-link text-end" href="service.html" data-en="Systems Integration"
+                        data-ar="تكامل الأنظمة">Systems Integration</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container wow fadeIn text-end" data-wow-delay="0.1s">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
-                    &copy; <a class="border-bottom text-end" href="#" data-en="PalDEV" data-ar="بال ديف">بال ديف</a>, <span data-en="All Rights Reserved" data-ar="جميع الحقوق محفوظة">جميع الحقوق محفوظة</span>.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu d-flex justify-content-end">
-                        <a href="/" class="ms-3" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
-                        <a href="contact.html" class="ms-3" data-en="Help" data-ar="المساعدة">المساعدة</a>
-                        <a href="#" class="ms-3" data-en="FAQs" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a>
+        <div class="container footer__bottom wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-end" href="index.html" data-en="PalDev Technologies" data-ar="بالديف تكنولوجيز">PalDev Technologies</a>, <span data-en="All Rights Reserved" data-ar="جميع الحقوق محفوظة">All Rights Reserved</span>.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu d-flex justify-content-end">
+                            <a href="index.html" class="ms-3" data-en="Home" data-ar="الرئيسية">Home</a>
+                            <a href="contact.html" class="ms-3" data-en="Help" data-ar="المساعدة">Help</a>
+                            <a href="index.html#accordionFAQ1" class="ms-3" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</a>
+                            <a href="ar/index.html" class="ms-3">النسخة العربية</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- Footer End -->
+    </footer>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
@@ -376,97 +282,6 @@
 
     <!-- Include SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent the default form submission
-
-            // Collect form data
-            const formData = new FormData(this);
-
-            // Send form data to PHP handler using Fetch API
-            fetch('contact_form_handler.php', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Check for success or error status
-                    if (data.status === 'success') {
-                        // Show SweetAlert2 success message
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Message Sent Successfully!',
-                            text: 'We will get back to you shortly.',
-                            confirmButtonText: 'Okay'
-                        });
-                    } else {
-                        // Show SweetAlert2 error message
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: data.message,
-                            confirmButtonText: 'Try Again'
-                        });
-                    }
-                })
-                .catch(error => {
-                    // Show SweetAlert2 error message in case of a network error
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Something went wrong! Please try again later.',
-                        confirmButtonText: 'Okay'
-                    });
-                });
-        });
-    </script>
-
-<script>
-   document.addEventListener('DOMContentLoaded', function () {
-    // Get the language toggle button
-    const languageToggleButton = document.getElementById('language-toggle');
-
-    // Function to set language
-    function setLanguage(lang) {
-        // Set language in localStorage
-        localStorage.setItem('selectedLanguage', lang);
-
-        // Update the button text to indicate the current language
-        languageToggleButton.innerText = lang === 'en' ? 'Arabic' : 'English';
-
-        // Set the page direction to RTL for Arabic and LTR for English
-        document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-        // Select all elements with data-en and data-ar attributes
-        const elements = document.querySelectorAll('[data-en][data-ar]');
-
-        // Loop through each element and update its text content
-        elements.forEach(element => {
-            element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-        });
-    }
-
-    // Function to toggle language
-    function toggleLanguage() {
-        // Get the current language from localStorage
-        let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
-        // Toggle the language variable between 'en' and 'ar'
-        currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-        // Set the new language
-        setLanguage(currentLanguage);
-    }
-
-    // Add an event listener to the button to call the toggleLanguage function when clicked
-    languageToggleButton.addEventListener('click', toggleLanguage);
-
-    // On page load, set the language to the one saved in localStorage, default to 'en'
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLanguage);
-});
-</script>
-
 
 </body>
 

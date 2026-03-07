@@ -29,7 +29,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
 
@@ -65,7 +65,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark p-0 align-items-center">
                 <!-- Logo -->
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <img src="img/logoo.svg" alt="Logo" class="logo" style="max-width: 100%; max-height: 700px;">
+                    <img src="img/logoo.svg" alt="PalDev Technologies" class="logo" style="max-width: 100%; max-height: 42px;">
                 </a>
 
                 <!-- Hamburger Menu -->
@@ -76,30 +76,21 @@
                 <!-- Collapsible Menu -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto align-items-center">
-                        <a href="index.html" class="nav-item nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+                        <a href="index.html" class="nav-item nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
                         <a href="about.html" class="nav-item nav-link" data-en="About" data-ar="من نحن">About</a>
-                        <a href="service.html" class="nav-item nav-link" data-en="Services"
-                            data-ar="خدماتنا">Services</a>
-                        <a href="project.html" class="nav-item nav-link" data-en="Projects"
-                            data-ar="مشاريعنا">Projects</a>
-                        <a href="contact.html" class="nav-item nav-link" data-en="Contact"
-                            data-ar="اتصل بنا">Contact</a>
+                        <a href="service.html" class="nav-item nav-link" data-en="Services" data-ar="خدماتنا">Services</a>
+                        <a href="project.html" class="nav-item nav-link active" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+                        <a href="contact.html" class="nav-item nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
 
                         <!-- Language Toggle for Smaller Screens -->
                         <div class="d-lg-none mt-3 mb-3">
-                            <button type="button" class="btn btn-outline-light" id="language-toggle-mobile"
-                                onclick="toggleLanguage()">
-                                Arabic
-                            </button>
+                            <a href="ar/project.html" class="btn btn-outline-light">العربية</a>
                         </div>
                     </div>
 
                     <!-- Language Toggle for Larger Screens -->
                     <div class="ms-lg-3 mt-3 mt-lg-0 d-none d-lg-block">
-                        <button type="button" class="btn btn-outline-light" id="language-toggle"
-                            onclick="toggleLanguage()">
-                            Arabic
-                        </button>
+                        <a href="ar/project.html" class="btn btn-outline-light">العربية</a>
                     </div>
                 </div>
             </nav>
@@ -110,7 +101,7 @@
     <div class="container-fluid pt-5 bg-primary hero-header mb-5">
         <div class="container pt-5">
             <div class="row g-5 pt-5">
-                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <div class="col-12 col-lg-8 align-self-center text-center text-lg-start mb-lg-0">
                     <h1 class="display-4 text-white mb-4 animated slideInRight" data-en="Our Projects"
                         data-ar="مشاريعنا">Our Projects</h1>
                     <p class="text-white mb-4"
@@ -119,69 +110,58 @@
                         Browse through our portfolio of projects where we’ve delivered tech solutions for a wide range
                         of industries and needs.</p>
                 </div>
-                <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/projects-hero.png" alt="" style="max-height: 300px;">
-                </div>
             </div>
         </div>
     </div>
     <!-- Hero End -->
 
     <!-- Projects Overview Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="project-item bg-light rounded p-4 text-center">
-                        <i class="fa fa-cogs fa-3x text-primary mb-3"></i>
-                        <h5 data-en="Custom Software Development" data-ar="تطوير البرمجيات المخصصة">Custom Software
-                            Development</h5>
-                        <p data-en="Tailor-made software for automating business processes."
-                            data-ar="برمجيات مخصصة لأتمتة عمليات الأعمال.">Tailor-made software for automating business
-                            processes.</p>
+    <section class="section section--gray">
+        <div class="section__inner">
+            <div class="section__head section__head--center mb-5">
+                <span class="section__eyebrow" data-en="Our Expertise" data-ar="مجالات خبرتنا">Our Expertise</span>
+                <h2 class="section__title" data-en="Where We Excel" data-ar="حيث نتميز">Where We Excel</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-card text-center h-100">
+                        <div class="service-card__icon mx-auto"><i class="fa fa-cogs"></i></div>
+                        <h5 class="service-card__title" data-en="Custom Software" data-ar="برمجيات مخصصة">Custom Software</h5>
+                        <p class="service-card__text mb-0" data-en="Workflows, dashboards, and business tools built to your specs." data-ar="سير عمل ولوحات تحكم وأدوات أعمال مصممة وفق مواصفاتك.">Workflows, dashboards, and business tools built to your specs.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="project-item bg-light rounded p-4 text-center">
-                        <i class="fa fa-mobile-alt fa-3x text-primary mb-3"></i>
-                        <h5 data-en="Mobile App Development" data-ar="تطوير تطبيقات الموبايل">Mobile App Development
-                        </h5>
-                        <p data-en="Modern and intuitive apps for iOS and Android platforms."
-                            data-ar="تطبيقات حديثة وبديهية لمنصات iOS و Android.">Modern and intuitive apps for iOS and
-                            Android platforms.</p>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="service-card text-center h-100">
+                        <div class="service-card__icon mx-auto"><i class="fa fa-mobile-alt"></i></div>
+                        <h5 class="service-card__title" data-en="Mobile Apps" data-ar="تطبيقات جوالة">Mobile Apps</h5>
+                        <p class="service-card__text mb-0" data-en="iOS and Android apps that are fast, intuitive, and maintainable." data-ar="تطبيقات iOS و Android سريعة وبديهية وقابلة للصيانة.">iOS and Android apps that are fast, intuitive, and maintainable.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="project-item bg-light rounded p-4 text-center">
-                        <i class="fa fa-laptop-code fa-3x text-primary mb-3"></i>
-                        <h5 data-en="Web Development" data-ar="تطوير المواقع الإلكترونية">Web Development</h5>
-                        <p data-en="Responsive websites to engage your audience online."
-                            data-ar="مواقع إلكترونية متجاوبة لجذب جمهورك عبر الإنترنت.">Responsive websites to engage
-                            your audience online.</p>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="service-card text-center h-100">
+                        <div class="service-card__icon mx-auto"><i class="fa fa-laptop-code"></i></div>
+                        <h5 class="service-card__title" data-en="Web & Web Apps" data-ar="الويب وتطبيقات الويب">Web & Web Apps</h5>
+                        <p class="service-card__text mb-0" data-en="Responsive sites and full web applications with modern stacks." data-ar="مواقع متجاوبة وتطبيقات ويب كاملة بتقنيات حديثة.">Responsive sites and full web applications with modern stacks.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="project-item bg-light rounded p-4 text-center">
-                        <i class="fa fa-network-wired fa-3x text-primary mb-3"></i>
-                        <h5 data-en="Systems Integration" data-ar="ترابط الأنظمة ">Systems Integration</h5>
-                        <p data-en="Seamlessly connect various platforms, ensuring your technology works."
-                            data-ar="ربط الأنظمة المختلفة بسلاسة لضمان تكامل التكنولوجيا.">Seamlessly connect various
-                            platforms, ensuring your technology works.</p>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="service-card text-center h-100">
+                        <div class="service-card__icon mx-auto"><i class="fa fa-network-wired"></i></div>
+                        <h5 class="service-card__title" data-en="Integration" data-ar="التكامل">Integration</h5>
+                        <p class="service-card__text mb-0" data-en="APIs, databases, and third-party services unified securely." data-ar="واجهات وقواعد بيانات وخدمات خارجية موحدة بأمان.">APIs, databases, and third-party services unified securely.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Projects Overview End -->
     <!-- Projects Start -->
-    <div class="container-fluid py-5" style="margin-bottom: 5rem;">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h1 data-en="Our Featured Projects" data-ar="مشاريعنا المميزة">Our Featured Projects</h1>
-                <p data-en="Explore our latest innovations and creative solutions."
-                    data-ar="اكتشف أحدث ابتكاراتنا وحلولنا الإبداعية.">
-                    Explore our latest innovations and creative solutions.
-                </p>
+    <section class="section section--white">
+        <div class="section__inner">
+            <div class="section__head section__head--center mb-5">
+                <span class="section__eyebrow" data-en="Case Studies" data-ar="دراسات حالة">Case Studies</span>
+                <h2 class="section__title" data-en="Featured Projects" data-ar="مشاريع مميزة">Featured Projects</h2>
+                <p class="section__intro" data-en="A sample of recent work: from HR systems and marketplaces to event platforms—each delivered with clear scope and support." data-ar="عينة من أعمالنا الأخيرة: من أنظمة الموارد البشرية والمنصات السوقية إلى منصات الفعاليات — كلها مُسلّمة بنطاق واضح ودعم مستمر.">A sample of recent work: from HR systems and marketplaces to event platforms—each delivered with clear scope and support.</p>
             </div>
             <div class="project-container">
                 <!-- HR System -->
@@ -258,7 +238,7 @@
 
             </div>
         </div>
-    </div>
+    </section>
     <!-- Projects End -->
 
     <!--  Modal Structure start -->
@@ -292,23 +272,20 @@
     <!--modal structure end-->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5" dir="">
+        <!-- Footer -->
+    <footer class="footer" dir="">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn text-end text-lg-start" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">Pal<span class="text-primary">DEV</span></h1>
-                    </a>
-                    <p class="mb-0"
-                        data-en="We are two Computer Science graduates passionate about using technology to turn your ideas into digital solutions. Whether it's web, app, or custom software development, we’re here to help bring your vision to life."
-                        data-ar="نحن خريجان من علوم الحاسوب متحمسان لاستخدام التكنولوجيا لتحويل أفكارك إلى حلول رقمية. سواء كان الأمر يتعلق بتطوير الويب أو التطبيقات أو البرمجيات المخصصة، نحن هنا للمساعدة في تحقيق رؤيتك.">
-                        نحن خريجان من علوم الحاسوب متحمسان لاستخدام التكنولوجيا لتحويل أفكارك إلى حلول رقمية. سواء كان
-                        الأمر يتعلق بتطوير الويب أو التطبيقات أو البرمجيات المخصصة، نحن هنا للمساعدة في تحقيق رؤيتك.
+                <div class="col-md-6 col-lg-3 wow fadeIn text-lg-start" data-wow-delay="0.1s">
+                    <a href="index.html" class="footer__brand d-inline-block">Pal<span>Dev</span></a>
+                    <p class="footer__text mb-0"
+                        data-en="PalDev Technologies delivers innovative digital solutions for businesses. From web and app development to custom software and systems integration, we help you bring your vision to life with scalable, professional products."
+                        data-ar="تقدم PalDev Technologies حلولاً رقمية مبتكرة للشركات. من تطوير المواقع والتطبيقات إلى البرمجيات المخصصة وتكامل الأنظمة، نساعدك في تحقيق رؤيتك بمنتجات احترافية وقابلة للتطوير.">
+                        PalDev Technologies delivers innovative digital solutions for businesses. From web and app development to custom software and systems integration, we help you bring your vision to life with scalable, professional products.
                     </p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</h5>
+                    <h5 class="footer__heading text-white mb-4" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h5>
                     <p class="text-end"><i class="fa fa-envelope me-3"></i>paldevtechnologies@gmail.com</p>
                     <div class="d-flex pt-2 justify-content-end">
                         <a class="btn btn-outline-light btn-social ms-2"
@@ -319,47 +296,42 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4" data-en="Popular Links" data-ar="روابط شائعة">روابط شائعة</h5>
-                    <a class="btn btn-link text-end" href="about.html" data-en="About Us" data-ar="معلومات عنا">معلومات
-                        عنا</a>
-                    <a class="btn btn-link text-end" href="contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل
-                        بنا</a>
+                    <h5 class="footer__heading text-white mb-4" data-en="Popular Links" data-ar="روابط شائعة">Popular Links</h5>
+                    <a class="btn btn-link text-end" href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a>
+                    <a class="btn btn-link text-end" href="contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn text-end" data-wow-delay="0.7s">
-                    <h5 class="text-white mb-4" data-en="Our Services" data-ar="خدماتنا">خدماتنا</h5>
-                    <a class="btn btn-link text-end" href="#" data-en="App Development" data-ar="تطوير التطبيقات">تطوير
-                        التطبيقات</a>
-                    <a class="btn btn-link text-end" href="#" data-en="Web Development" data-ar="تطوير المواقع">تطوير
-                        المواقع</a>
-                    <a class="btn btn-link text-end" href="#" data-en="Custom Software Solutions"
-                        data-ar="حلول البرمجيات المخصصة">حلول البرمجيات المخصصة</a>
-                    <a class="btn btn-link text-end" href="#" data-en="Systems Integration"
-                        data-ar="تكامل الأنظمة">تكامل الأنظمة</a>
+                    <h5 class="footer__heading text-white mb-4" data-en="Our Services" data-ar="خدماتنا">Our Services</h5>
+                    <a class="btn btn-link text-end" href="service.html" data-en="App Development" data-ar="تطوير التطبيقات">App Development</a>
+                    <a class="btn btn-link text-end" href="service.html" data-en="Web Development" data-ar="تطوير المواقع">Web Development</a>
+                    <a class="btn btn-link text-end" href="service.html" data-en="Custom Software Solutions"
+                        data-ar="حلول البرمجيات المخصصة">Custom Software Solutions</a>
+                    <a class="btn btn-link text-end" href="service.html" data-en="Systems Integration"
+                        data-ar="تكامل الأنظمة">Systems Integration</a>
                 </div>
             </div>
         </div>
 
-        <div class="container wow fadeIn text-end" data-wow-delay="0.1s">
+        <div class="container footer__bottom wow fadeIn" data-wow-delay="0.1s">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-end" href="#" data-en="PalDEV" data-ar="بال ديف">بال
-                            ديف</a>, <span data-en="All Rights Reserved" data-ar="جميع الحقوق محفوظة">جميع الحقوق
-                            محفوظة</span>.
+                        &copy; <a class="border-bottom text-end" href="index.html" data-en="PalDev Technologies" data-ar="بالديف تكنولوجيز">PalDev Technologies</a>, <span data-en="All Rights Reserved" data-ar="جميع الحقوق محفوظة">All Rights Reserved</span>.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu d-flex justify-content-end">
-                            <a href="/" class="ms-3" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
-                            <a href="contact.html" class="ms-3" data-en="Help" data-ar="المساعدة">المساعدة</a>
-                            <a href="#" class="ms-3" data-en="FAQs" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a>
+                            <a href="index.html" class="ms-3" data-en="Home" data-ar="الرئيسية">Home</a>
+                            <a href="contact.html" class="ms-3" data-en="Help" data-ar="المساعدة">Help</a>
+                            <a href="index.html#accordionFAQ1" class="ms-3" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</a>
+                            <a href="ar/index.html" class="ms-3">النسخة العربية</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
 
-    </div>
-    <!-- Footer End -->
+    
 
     <!-- External Libraries (ensure these are loaded before custom scripts that depend on them) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -377,69 +349,20 @@
     <!-- Custom Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize WOW.js animations
-            new WOW().init();
+            // When language changes (from main.js), update project modal if open
+            document.addEventListener('paldev:languageChange', function () {
+                if (typeof updateModalContent === 'function') updateModalContent();
+            });
 
-            /*** LANGUAGE TOGGLING ***/
-
-            // Sets the language, updates direction, text content, modal (if open) and button text,
-            // then saves the preference in localStorage.
-            function setLanguage(lang) {
-                document.documentElement.setAttribute('lang', lang);
-                document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-                // Update all elements that have data-en and data-ar attributes.
-                document.querySelectorAll('[data-en][data-ar]').forEach(element => {
-                    element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-                });
-
-                // Update the language toggle button text.
-                const langToggle = document.getElementById('language-toggle');
-                if (langToggle) {
-                    langToggle.textContent = lang === 'ar' ? 'English' : 'Arabic';
-                }
-
-                // If the project modal is open, update its content.
-                const modal = document.getElementById('projectModal');
-                if (modal && modal.style.display === 'block') {
-                    updateModalContent();
-                }
-
-                // Persist the language selection.
-                localStorage.setItem('preferredLanguage', lang);
-            }
-
-            // Toggles between English and Arabic.
-            function toggleLanguage() {
-                const currentLang = document.documentElement.getAttribute('lang') || 'en';
-                const newLang = currentLang === 'en' ? 'ar' : 'en';
-                setLanguage(newLang);
-            }
-
-            // Attach toggleLanguage to the button if it exists.
-            const languageToggleButton = document.getElementById('language-toggle');
-            if (languageToggleButton) {
-                languageToggleButton.addEventListener('click', toggleLanguage);
-            }
-
-            // Set the initial language from localStorage (default to English).
-            const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
-            setLanguage(savedLanguage);
-
-
-            /*** MODAL CLOSE FUNCTIONALITY ***/
-
-            // Modal close actions: close button click, click outside modal, or Escape key press.
-            const modal = document.getElementById('projectModal');
+            // Modal close: close button, click outside, Escape key
+            var modal = document.getElementById('projectModal');
             if (modal) {
-                const closeBtn = modal.querySelector('.close');
-                if (closeBtn) {
-                    closeBtn.addEventListener('click', () => modal.style.display = 'none');
-                }
-                window.addEventListener('click', event => {
+                var closeBtn = modal.querySelector('.close');
+                if (closeBtn) closeBtn.addEventListener('click', function () { modal.style.display = 'none'; });
+                window.addEventListener('click', function (event) {
                     if (event.target === modal) modal.style.display = 'none';
                 });
-                document.addEventListener('keydown', event => {
+                document.addEventListener('keydown', function (event) {
                     if (event.key === 'Escape') modal.style.display = 'none';
                 });
             }
