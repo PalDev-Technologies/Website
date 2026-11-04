@@ -1,4 +1,0 @@
-/* Arabic RTL typography for PalDev ar/ pages */
-html[lang="ar"], html[dir="rtl"] {
-    font-family: 'Tajawal', 'Noto Sans Arabic', 'Segoe UI', sans-serif;
-}

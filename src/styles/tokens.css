@@ -1,0 +1,65 @@
+:root {
+  --color-navy: #06152f;
+  --color-navy-dark: #030d20;
+  --color-blue: #087cf5;
+  --color-blue-bright: #1a8cff;
+  --color-cyan: #08d8ed;
+  --color-white: #ffffff;
+  --color-light: #f5f8fc;
+  --color-text: #0a1a35;
+  --color-text-secondary: #63748c;
+  --color-muted-on-dark: #b7c3d6;
+  --color-line: #e4edf6;
+  --color-line-strong: #d5e1ee;
+
+  --font-sans: var(--font-manrope), var(--font-arabic), "Geeza Pro", "Segoe UI", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra: 800;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: clamp(0.95rem, 0.92rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.02rem, 0.98rem + 0.25vw, 1.125rem);
+  --text-xl: clamp(1.2rem, 1.05rem + 0.6vw, 1.35rem);
+  --text-2xl: clamp(1.85rem, 1.35rem + 1.6vw, 2.5rem);
+  --text-hero: clamp(2.05rem, 1.15rem + 2.7vw, 4rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: clamp(3rem, 6vw, 5rem);
+  --space-9: clamp(3.5rem, 7vw, 6.5rem);
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --section-space: clamp(48px, 7vw, 96px);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 10px 30px rgba(6, 21, 47, 0.05);
+  --shadow-card-hover: 0 18px 40px rgba(6, 21, 47, 0.1);
+  --shadow-nav: 0 10px 30px rgba(3, 13, 32, 0.28);
+  --shadow-button: 0 8px 22px rgba(8, 124, 245, 0.28);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 220ms;
+  --duration-slow: 640ms;
+
+  --container: 1240px;
+  --header-height: 72px;
+
+  /*
+    Mobile-first breakpoints, chosen where the layout changes:
+    480px large phone, 768px tablet, 960px navigation,
+    1024px two-column pages, 1200px desktop, 1440px large desktop.
+  */
+}
