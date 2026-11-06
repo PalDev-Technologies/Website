@@ -343,6 +343,7 @@ function replyAddress(email: string, name: string) {
 type OutgoingMail = {
   to: string;
   replyTo: string;
+  fromName: string;
   subject: string;
   text: string;
   html: string;
@@ -374,11 +375,20 @@ function mailbox() {
   };
 }
 
+function senderAddress(from: string, fallback: string) {
+  const match = from.match(/<([^>]+)>/);
+  return (match?.[1] || from || fallback).trim();
+}
+
 async function sendToInbox(mail: OutgoingMail) {
   const account = mailbox();
   if (!account) throw new Error("Mailbox is not configured.");
+  const safeName = mail.fromName.replace(/[\r\n<>"]/g, "").trim();
   await account.transport.sendMail({
-    from: account.from,
+    from: {
+      name: safeName || brand.name,
+      address: senderAddress(account.from, account.to),
+    },
     to: account.to,
     replyTo: mail.replyTo,
     subject: mail.subject,
@@ -422,6 +432,7 @@ export async function queueNotification(record: StoredContact | StoredQuote, kin
       await sendToInbox({
         to,
         replyTo: replyAddress(record.email, name),
+        fromName: name,
         subject,
         text,
         html,
