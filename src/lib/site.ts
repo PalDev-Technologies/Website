@@ -54,7 +54,7 @@ export const socialLinks: ReadonlyArray<{
 }> = [
   { id: "linkedin", label: "LinkedIn", href: null },
   { id: "x", label: "X", href: null },
-  { id: "instagram", label: "Instagram", href: null },
+  { id: "instagram", label: "Instagram", href: "https://www.instagram.com/paldevtechnologies/" },
   { id: "facebook", label: "Facebook", href: null },
 ];
 
