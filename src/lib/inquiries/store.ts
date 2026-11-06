@@ -97,12 +97,19 @@ async function readStore(): Promise<StoreFile> {
     }
     return { ...emptyStore(), ...parsed, idempotency: parsed.idempotency ?? {} };
   } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") return emptyStore();
-    throw error;
+    const code = (error as NodeJS.ErrnoException).code;
+    if (code !== "ENOENT") {
+      console.error(
+        JSON.stringify({
+          event: "inquiry_store_unreadable",
+          code: code ?? null,
+          message: error instanceof Error ? error.message : "Read failed",
+        }),
+      );
+    }
+    return emptyStore();
   }
 }
-
-const readOnlyCodes = new Set(["EROFS", "EACCES", "EPERM"]);
 
 async function writeStore(store: StoreFile) {
   try {
@@ -111,12 +118,13 @@ async function writeStore(store: StoreFile) {
     await writeFile(temporary, JSON.stringify(store, null, 2));
     await rename(temporary, filePath);
   } catch (error) {
-    const code = (error as NodeJS.ErrnoException).code;
-    if (code && readOnlyCodes.has(code)) {
-      console.error(JSON.stringify({ event: "inquiry_store_unwritable", code }));
-      return;
-    }
-    throw error;
+    console.error(
+      JSON.stringify({
+        event: "inquiry_store_unwritable",
+        code: (error as NodeJS.ErrnoException).code ?? null,
+        message: error instanceof Error ? error.message : "Write failed",
+      }),
+    );
   }
 }
 
