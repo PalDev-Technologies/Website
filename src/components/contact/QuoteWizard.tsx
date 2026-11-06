@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   budgets,
   contactMethods,
@@ -81,7 +81,16 @@ export function QuoteWizard() {
   const [failure, setFailure] = useState("");
   const [success, setSuccess] = useState<{ reference: string; submittedAt: string } | null>(null);
   const key = useRef<string | null>(null);
+  const formStart = useRef<HTMLDivElement>(null);
+  const revealOnStep = useRef(false);
   const phoneRequired = draft.contactMethod === "Phone Call" || draft.contactMethod === "WhatsApp";
+
+  useEffect(() => {
+    if (!revealOnStep.current) return;
+    revealOnStep.current = false;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    formStart.current?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }, [step]);
 
   function payload(): QuoteInput {
     if (key.current == null) key.current = crypto.randomUUID().replaceAll("-", "");
@@ -130,6 +139,12 @@ export function QuoteWizard() {
     target?.focus();
   }
 
+  function openStep(next: number) {
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    revealOnStep.current = true;
+    setStep(next);
+  }
+
   function continueStep() {
     const nextErrors = validateQuoteStep(payload(), step);
     if (Object.keys(nextErrors).length > 0) {
@@ -137,7 +152,7 @@ export function QuoteWizard() {
       return;
     }
     setErrors({});
-    setStep((current) => Math.min(current + 1, steps.length - 1));
+    openStep(Math.min(step + 1, steps.length - 1));
   }
 
   async function submit() {
@@ -226,7 +241,7 @@ export function QuoteWizard() {
             better understand your project and discuss the next steps.
           </p>
         </header>
-        <div className={styles.wizard}>
+        <div className={styles.wizard} ref={formStart}>
           <div className={styles.progress} aria-label={`Step ${step + 1} of ${steps.length}`}>
             <p className={styles.compactProgress}>
               Step {step + 1} of {steps.length}
@@ -285,7 +300,7 @@ export function QuoteWizard() {
               />
             ) : null}
             {step === 3 ? <ContactStep draft={draft} errors={errors} phoneRequired={phoneRequired} onPatch={patch} /> : null}
-            {step === 4 ? <Review draft={draft} onEdit={setStep} /> : null}
+            {step === 4 ? <Review draft={draft} onEdit={openStep} /> : null}
             <div className={styles.honey} aria-hidden="true">
               <label>
                 Website
@@ -294,7 +309,7 @@ export function QuoteWizard() {
             </div>
             <div className={styles.wizardActions}>
               {step > 0 ? (
-                <button className={styles.secondaryDark} type="button" onClick={() => setStep((current) => current - 1)}>
+                <button className={styles.secondaryDark} type="button" onClick={() => openStep(step - 1)}>
                   Back
                 </button>
               ) : (

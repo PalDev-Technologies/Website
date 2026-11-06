@@ -1,12 +1,17 @@
 /**
  * Inquiry configuration.
  *
- * Email delivery is optional. Set these environment variables to send notifications:
- * - PALDEV_NOTIFY_TO: inbox that should receive inquiry emails
- * - PALDEV_NOTIFY_FROM: from address, when a provider is configured
- * - PALDEV_NOTIFY_WEBHOOK: https URL that receives the notification JSON
+ * Contact and quote forms deliver a copy into PalDev's own inbox. Nothing is emailed to the client.
+ * Set:
+ * - PALDEV_SMTP_HOST: mail server, such as smtp.gmail.com
+ * - PALDEV_SMTP_PORT: 465 for a secure connection
+ * - PALDEV_SMTP_USER: the mailbox address
+ * - PALDEV_SMTP_PASS: the mailbox app password
+ * - PALDEV_NOTIFY_TO: inbox that receives the form, defaults to PALDEV_SMTP_USER
+ * - PALDEV_NOTIFY_FROM: from address, defaults to PALDEV_SMTP_USER
+ * - PALDEV_NOTIFY_WEBHOOK: optional https URL that also receives the notification JSON
  *
- * Submissions are stored even when email is not configured.
+ * Submissions are stored locally even when email delivery fails.
  * There is no public privacy-policy page, so consent checkboxes do not link to one.
  */
 

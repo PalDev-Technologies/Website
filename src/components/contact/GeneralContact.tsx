@@ -148,7 +148,7 @@ export function GeneralContact() {
                     type="tel"
                     autoComplete="tel"
                     inputMode="tel"
-                    placeholder="+1 555 0100"
+                    placeholder="+000 000 000000"
                     value={values.phone}
                     aria-invalid={Boolean(errors.phone)}
                     onChange={(event) => update("phone", event.target.value)}

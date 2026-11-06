@@ -39,6 +39,12 @@ export async function POST(request: Request) {
   try {
     const record = await saveContact(input);
     const notification = await queueNotification(record, "contact");
+    if (notification !== "sent") {
+      return Response.json(
+        { ok: false, message: "We couldn't send your message. Please try again in a few minutes." },
+        { status: 502 },
+      );
+    }
     return Response.json({
       ok: true,
       reference: record.reference,
