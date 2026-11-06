@@ -1,0 +1,130 @@
+.section {
+  padding: clamp(40px, 6vw, 72px) var(--gutter) clamp(48px, 7vw, 88px);
+  background: #f5f8fc;
+}
+
+.banner {
+  position: relative;
+  width: min(1200px, 100%);
+  min-height: 200px;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #03142c;
+  box-shadow: 0 18px 40px rgba(3, 20, 44, 0.16);
+}
+
+.art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(18px, 3vw, 40px);
+  min-height: 200px;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 4vw, 56px);
+}
+
+.copy {
+  max-width: 480px;
+  min-width: 0;
+}
+
+.copy h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.125rem);
+  font-weight: var(--font-weight-extra);
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.copy p {
+  margin: 12px 0 0;
+  color: #b8c8dd;
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 24px;
+  background: #087cf5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(8, 124, 245, 0.32);
+  transition:
+    background 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.button svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 200ms ease;
+}
+
+.button:hover {
+  background: #1a8cff;
+  box-shadow: 0 10px 22px rgba(8, 124, 245, 0.4);
+}
+
+.button:hover svg {
+  transform: translateX(3px);
+}
+
+.button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    align-items: flex-start;
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button svg {
+    transition: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .section {
+    padding: 48px 24px 72px;
+  }
+
+  .content {
+    flex-wrap: nowrap;
+    gap: 40px;
+    min-height: 200px;
+    padding: 36px 56px;
+  }
+
+  .copy h2 {
+    font-size: 34px;
+  }
+}
