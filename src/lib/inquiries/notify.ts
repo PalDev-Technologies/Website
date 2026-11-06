@@ -124,15 +124,20 @@ type OutgoingMail = {
   text: string;
 };
 
+function setting(name: string) {
+  const value = process.env[name];
+  return typeof value === "string" ? value.trim() : "";
+}
+
 function mailbox() {
-  const host = process.env.PALDEV_SMTP_HOST?.trim() || "";
-  const user = process.env.PALDEV_SMTP_USER?.trim() || "";
-  const pass = (process.env.PALDEV_SMTP_PASS || "").replace(/\s+/g, "");
-  const port = Number(process.env.PALDEV_SMTP_PORT?.trim() || "465");
+  const host = setting("PALDEV_SMTP_HOST");
+  const user = setting("PALDEV_SMTP_USER");
+  const pass = setting("PALDEV_SMTP_PASS").replace(/\s+/g, "");
+  const port = Number(setting("PALDEV_SMTP_PORT") || "465");
   if (!host || !user || !pass || !Number.isInteger(port)) return null;
   return {
-    from: process.env.PALDEV_NOTIFY_FROM?.trim() || user,
-    to: process.env.PALDEV_NOTIFY_TO?.trim() || user,
+    from: setting("PALDEV_NOTIFY_FROM") || user,
+    to: setting("PALDEV_NOTIFY_TO") || user,
     transport: nodemailer.createTransport({
       host,
       port,
@@ -170,9 +175,9 @@ export async function queueNotification(record: StoredContact | StoredQuote, kin
       : `New quote request from ${name} | PalDev Technologies`;
   const text = kind === "contact" ? contactText(record as StoredContact) : quoteText(record as StoredQuote);
   const account = mailbox();
-  const to = account?.to || process.env.PALDEV_NOTIFY_TO?.trim() || "";
-  const from = account?.from || process.env.PALDEV_NOTIFY_FROM?.trim() || "";
-  const webhook = process.env.PALDEV_NOTIFY_WEBHOOK?.trim() || "";
+  const to = account?.to || setting("PALDEV_NOTIFY_TO");
+  const from = account?.from || setting("PALDEV_NOTIFY_FROM");
+  const webhook = setting("PALDEV_NOTIFY_WEBHOOK");
   const payload = {
     reference: record.reference,
     kind,
