@@ -3,7 +3,7 @@ import path from "node:path";
 import nodemailer from "nodemailer";
 import type { StoredContact, StoredQuote } from "@/lib/inquiries/store";
 
-export type NotificationState = "sent" | "queued";
+export type NotificationState = "sent" | "queued" | "unconfigured";
 
 const outbox = path.join(process.cwd(), "data", "outbox.jsonl");
 
@@ -127,7 +127,7 @@ type OutgoingMail = {
 function mailbox() {
   const host = process.env.PALDEV_SMTP_HOST?.trim() || "";
   const user = process.env.PALDEV_SMTP_USER?.trim() || "";
-  const pass = process.env.PALDEV_SMTP_PASS?.trim() || "";
+  const pass = (process.env.PALDEV_SMTP_PASS || "").replace(/\s+/g, "");
   const port = Number(process.env.PALDEV_SMTP_PORT?.trim() || "465");
   if (!host || !user || !pass || !Number.isInteger(port)) return null;
   return {
@@ -224,6 +224,7 @@ export async function queueNotification(record: StoredContact | StoredQuote, kin
       );
     }
   } else {
+    status = "unconfigured";
     console.error(
       JSON.stringify({
         event: "email_not_configured",
