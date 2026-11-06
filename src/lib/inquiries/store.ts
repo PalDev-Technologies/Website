@@ -102,11 +102,22 @@ async function readStore(): Promise<StoreFile> {
   }
 }
 
+const readOnlyCodes = new Set(["EROFS", "EACCES", "EPERM"]);
+
 async function writeStore(store: StoreFile) {
-  await mkdir(directory, { recursive: true });
-  const temporary = `${filePath}.tmp`;
-  await writeFile(temporary, JSON.stringify(store, null, 2));
-  await rename(temporary, filePath);
+  try {
+    await mkdir(directory, { recursive: true });
+    const temporary = `${filePath}.tmp`;
+    await writeFile(temporary, JSON.stringify(store, null, 2));
+    await rename(temporary, filePath);
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException).code;
+    if (code && readOnlyCodes.has(code)) {
+      console.error(JSON.stringify({ event: "inquiry_store_unwritable", code }));
+      return;
+    }
+    throw error;
+  }
 }
 
 function reference(prefix: "C" | "Q", now: Date) {
