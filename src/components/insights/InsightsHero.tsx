@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HeroArt } from "@/components/layout/HeroArt";
 import { ArrowIcon } from "@/components/ui/icons";
 import { publishedArticles } from "@/lib/insights";
 import styles from "./insights.module.css";
@@ -34,12 +34,9 @@ export function InsightsHero() {
           </div>
         </div>
         <figure className={styles.stage}>
-          <Image
-            src="/images/insights_Paldev.png"
+          <HeroArt
+            id="insights"
             alt="Illustration of documents, a magnifying glass, and technology icons on a glowing platform"
-            width={1671}
-            height={941}
-            sizes="(max-width: 1024px) 1px, 900px"
             className={styles.heroArt}
           />
         </figure>

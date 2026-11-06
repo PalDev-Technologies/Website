@@ -6,6 +6,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { ArrowIcon } from "@/components/ui/icons";
 import { isActivePath, mainNav, quoteHref } from "@/lib/site";
 import { BrandLockup } from "./BrandLockup";
+import { prefetchHero } from "./prefetchHero";
 import styles from "./Header.module.css";
 
 export function Header() {
@@ -21,6 +22,22 @@ export function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const panelId = useId();
+
+  useEffect(() => {
+    let cancelled = false;
+    let timer = 0;
+    const hrefs = mainNav.map((item) => item.href).filter((href) => href !== pathname);
+    const step = (index: number) => {
+      if (cancelled || index >= hrefs.length) return;
+      prefetchHero(hrefs[index]);
+      timer = window.setTimeout(() => step(index + 1), 120);
+    };
+    timer = window.setTimeout(() => step(0), 600);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -96,6 +113,8 @@ export function Header() {
                     href={item.href}
                     className={`${styles.link} ${active ? styles.active : ""}`}
                     aria-current={active ? "page" : undefined}
+                    onMouseEnter={() => prefetchHero(item.href)}
+                    onFocus={() => prefetchHero(item.href)}
                   >
                     {item.label}
                   </Link>
@@ -146,6 +165,8 @@ export function Header() {
                       href={item.href}
                       className={`${styles.mobileLink} ${active ? styles.mobileActive : ""}`}
                       aria-current={active ? "page" : undefined}
+                      onMouseEnter={() => prefetchHero(item.href)}
+                      onFocus={() => prefetchHero(item.href)}
                       onClick={() => setOpen(false)}
                     >
                       {item.label}

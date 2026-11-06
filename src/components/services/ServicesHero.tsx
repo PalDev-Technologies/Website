@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HeroArt } from "@/components/layout/HeroArt";
 import { ArrowIcon } from "@/components/ui/icons";
 import { quoteHref } from "@/lib/site";
 import styles from "./services.module.css";
@@ -38,12 +38,9 @@ export function ServicesHero() {
 function HeroVisual() {
   return (
     <figure className={styles.stage}>
-      <Image
-        src="/images/services_Paldev.png"
+      <HeroArt
+        id="services"
         alt="Illustration of a laptop dashboard surrounded by code, data, and cloud tools"
-        width={1672}
-        height={941}
-        sizes="(max-width: 1024px) 1px, 900px"
         className={styles.heroImage}
       />
     </figure>

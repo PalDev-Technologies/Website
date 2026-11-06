@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HeroArt } from "@/components/layout/HeroArt";
 import { quoteHref } from "@/lib/site";
 import styles from "./projects.module.css";
 
@@ -29,12 +29,9 @@ export function ProjectsHero() {
           </div>
         </div>
         <figure className={styles.stage}>
-          <Image
-            src="/images/project_Paldev.png?v=2"
+          <HeroArt
+            id="projects"
             alt="Illustration of a laptop, tablet, and phone showing digital product interfaces"
-            width={1671}
-            height={941}
-            sizes="(max-width: 1024px) 1px, 900px"
             className={styles.heroArt}
           />
         </figure>

@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HeroArt } from "@/components/layout/HeroArt";
 import { ArrowIcon } from "@/components/ui/icons";
 import { quoteHref } from "@/lib/site";
 import styles from "./Hero.module.css";
-
-const heroImage = "/images/Hero_pal.png";
 
 export function Hero() {
   return (
@@ -31,12 +29,9 @@ export function Hero() {
       </div>
       <div className={styles.grid}>
         <div className={styles.visual}>
-          <Image
-            src={heroImage}
+          <HeroArt
+            id="home"
             alt="PalDev P mark with a laptop, code, and digital technology graphics"
-            width={1672}
-            height={941}
-            sizes="(max-width: 1024px) 1px, 100vw"
             className={styles.heroImage}
           />
         </div>

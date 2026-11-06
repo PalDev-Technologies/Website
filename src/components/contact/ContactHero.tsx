@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { HeroArt } from "@/components/layout/HeroArt";
 import styles from "./contact.module.css";
 
 export function ContactHero() {
@@ -29,14 +29,7 @@ export function ContactHero() {
           </div>
         </div>
         <figure className={styles.stage}>
-          <Image
-            src="/images/PalDev_LogoNB.png"
-            alt="PalDev Technologies"
-            width={1535}
-            height={1024}
-            sizes="(max-width: 1024px) 1px, 520px"
-            className={styles.heroArt}
-          />
+          <HeroArt id="contact" alt="PalDev Technologies" className={styles.heroArt} />
         </figure>
       </div>
     </section>

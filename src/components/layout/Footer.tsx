@@ -48,7 +48,7 @@ export function Footer() {
           <div className={styles.brand}>
             <Link href="/" className={styles.logoLink}>
               <Image
-                src="/images/PalDev_LogoNB.png"
+                src="/images/PalDev_LogoNB.webp"
                 alt="PalDev Technologies"
                 width={1535}
                 height={1024}
